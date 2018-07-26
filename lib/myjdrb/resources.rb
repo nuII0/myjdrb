@@ -18,15 +18,6 @@ module Myjdrb
                       storage: { type: String, default: "null" },
                       key: { type: String }
                     })
-
-    #define_resource(name: :set,
-                    #parameter:
-                    #{
-                      #interface_name: REQUIRED,
-                      #storage: "null",
-                      #key: REQUIRED,
-                      #value: REQUIRED
-                    #})
   end
   class LinkGrabberV2 < ResourceProxy; end
   class Jd < ResourceProxy; end
