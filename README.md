@@ -22,7 +22,7 @@ devices = api.devices
 
 dev = devices.first
 dev.name
-=> "Your configured instance Name in Jdownloader"
+=> "user@MyDevice"
 ```
 ###
 

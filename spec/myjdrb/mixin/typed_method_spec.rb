@@ -35,22 +35,22 @@ RSpec.describe Myjdrb::Mixin::TypedMethod, :typed_method do
       let (:parameter) { {foo: { type: String, default: "bar" } } }
 
       it 'creates the method' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect(subject.respond_to?(method_name)).to eq(true)
       end
 
       it 'yields optional parameter' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name, &b) }.to yield_with_args({foo: "bar"})
       end
 
       it 'allows custom parameter of valid type' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name,foo: "baz", &b) }.to yield_with_args({foo: "baz"})
       end
 
       it 'does not allow other types' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name,foo: %r{not_a_string}, &b) }.to raise_error(ArgumentError)
       end
     end
@@ -59,17 +59,17 @@ RSpec.describe Myjdrb::Mixin::TypedMethod, :typed_method do
       let (:parameter) { {foo: { type: String } } }
 
       it 'creates the method' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect(subject.respond_to?(method_name)).to eq(true)
       end
 
       it 'allows parameter of valid type' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name,foo: "baz", &b) }.to yield_with_args({foo: "baz"})
       end
 
       it 'does not allow other types' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name,foo: %r{not_a_string}, &b) }.to raise_error(ArgumentError)
       end
     end
@@ -83,25 +83,25 @@ RSpec.describe Myjdrb::Mixin::TypedMethod, :typed_method do
       end
 
       it 'creates the method' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect(subject.respond_to?(method_name)).to eq(true)
       end
 
       it 'allows parameter of valid type' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name,foo: "baz", &b) }.to yield_with_args({foo: "baz",
                                                                                            bar: 1337,
                                                                                            baz: %r{.*}})
       end
 
       it 'does not allow other types' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         expect { |b| subject.public_send(method_name,foo: %r{not_a_string}, &b) }.to raise_error(ArgumentError)
         expect { |b| subject.public_send(method_name,foo: "a string", baz: "not_a_regexp", &b) }.to raise_error(ArgumentError)
       end
 
       it 'preservs parameter order' do
-        testclass.define_typed_method(name: method_name, parameter_schema: parameter)
+        testclass.define_typed_method(name: method_name, typed_parameter: parameter)
         b = Proc.new { |h| expect(h.values).to eq(["baz", 1337, %r{.*}]) }
         subject.public_send(method_name,foo: "baz", &b)
       end

@@ -1,7 +1,7 @@
 require 'json'
-require 'myjdrb/structs'
+require 'myjdrb/structs/base'
 
-RSpec.describe Myjdrb::Structs, :structs do
+RSpec.describe Myjdrb::Structs::Base, :structs do
 
   let (:test_class) do
     Class.new Myjdrb::Structs::Base do

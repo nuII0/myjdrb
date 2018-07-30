@@ -18,6 +18,10 @@ module Myjdrb
         assignJobID: true)
         make_instance_variables method(__method__).parameters, binding
       end
+
+      def add_link url
+        @links = add_to_comma_separated_string @links, url
+      end
     end
   end
 end

@@ -11,12 +11,15 @@ module Myjdrb
         define_method :action do
           (URI.parse uri)
         end
+
         define_method :uri do
           ::Myjdrb::Urls::API + (URI.parse uri)
         end
+
         define_method :response_schema do
           response_schema
         end
+
         define_method :request_schema do
           request_schema
         end
@@ -28,14 +31,16 @@ module Myjdrb
         define_method :initialize do |sessiontoken:, device_id: |
           instance_variable_set(:@sessiontoken, sessiontoken)
           instance_variable_set(:@device_id, device_id)
-
         end
+
         define_method :action do
           (URI.parse uri)
         end
+
         define_method :uri do
           Myjdrb::Urls::API + "t_#{@sessiontoken}_#{@device_id}#{(URI.parse uri)}"
         end
+
         define_method :response_schema do
           response_schema
         end

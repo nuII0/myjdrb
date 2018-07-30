@@ -1,7 +1,9 @@
 require_relative 'mixin/initializable'
 require_relative 'mixin/member_equality'
 
-require_relative 'resources'
+Dir.glob(File.join(File.dirname(__FILE__), 'resources/*')).each do |file|
+  require file
+end
 
 module Myjdrb
   # Running JDownloader instances are modeled as devices
@@ -82,10 +84,5 @@ module Myjdrb
       end
       return instance_variable_get var
     end
-
-
-
-
-
   end
 end
