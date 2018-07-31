@@ -60,46 +60,38 @@ config.list(pattern: %r{org\.jdownloader\.plugins\.components\.youtube.*})
 The LinkGrabberV2 endpoint can be used to add and manage download resources.
 Links represent download resources like Videos or Files. They are grouped in packages.
 
-#### Adding a Package with Links
-A new Package with links can be added in the following ways:
+#### Querying links for resources
+Its possible to crawl webpages for downloadable resources and group them into a package.
+
 To add links, construct a `Myjdrb::Structs::AddLinksQueryStorable` and add links to it.
 ```rb
 struct = Myjdrb::Structs::AddLinksQueryStorable.new
 
 struct.packageName = "MyNewPackage"
 
-struct.add_link("http://foo.local/myfile")
-struct.add_link("http://bar.local/another")
+struct.add_link("http://foo.local/webpage_with_content")
 
-dev.linkgrabberv2.addLinks(struct.to_json)
-=> {:id=>1337} # Returns a PackageUUID
+dev.linkgrabberv2.addLinks(struct)
+=> {:id=>1337} # Returns an event id
 ```
 
 or:
-```rb
-struct.add_link(["http://foo.local/myfile","http://bar.local/another"])
-```
-
-or:
-```rb
-Myjdrb::Structs::AddLinksQueryStorable.new(links:"link1,link2,link3")
-```
 
 `Myjdrb::Structs::AddLinksQueryStorable` has more configuration options like `#autoExtract (Boolean)`, `#downloadPassword (String)` and so on.
 See [`Myjdrb::Structs::AddLinksQueryStorable`](lib/myjdrb/structs/add_links_query_storable.rb) for query options.
 
-#### Querying packages
-Receiving informations about current listed packages:
+#### Listing packages
+Receiving informations about current packages:
 
 ```rb
-query = Myjdrb::Structs::PackageQueryStorable.new
-packages = dev.linkgrabberv2.queryPackages(query.to_json)
+struct = Myjdrb::Structs::PackageQueryStorable.new
+packages = dev.linkgrabberv2.queryPackages(query: struct)
 
 # Returns array of packages
 =>[{:saveTo=>"/whatever/bar", :hosts=>["foo.local"], :name=>"MyNewPackage", :childCount=>2, :uuid=>1337},
    ...]
 
-package_uuid = packages.first.fetch(:uuid)
+event_uuid = packages.first.fetch(:uuid)
 ```
 
 See [`Myjdrb::Structs::PackageQueryStorable`](lib/myjdrb/structs/package_query_storable.rb) for query options.

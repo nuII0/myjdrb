@@ -21,7 +21,20 @@ module Myjdrb
       define_resource(name: :addLinks,
                       parameter:
                       {
-                        query: { type: Myjdrb::Structs::AddLinksQueryStorable }
+                        query: { type: Structs::AddLinksQueryStorable }
+                      })
+
+      define_resource(name: :queryPackages,
+                      parameter:
+                      {
+                        query: { type: Structs::PackageQueryStorable }
+                      })
+
+      define_resource(name: :removeLinks,
+                      parameter:
+                      {
+                        linkIds: { type: [[Integer]], default: [] },
+                        packageIds: { type: [[Integer]], default: [] }
                       })
       #parameter:
       #{

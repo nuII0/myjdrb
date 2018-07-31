@@ -24,10 +24,9 @@ module Myjdrb
         make_instance_variables method(__method__).parameters, binding
       end
 
-      def add_link url
-        @strings = add_to_comma_separated_string @strings, url
+      def add_package_uuid uuid
+        @packageUUIDs = add_to_comma_separated_string @packageUUIDs, uuid
       end
-
     end
   end
 end
