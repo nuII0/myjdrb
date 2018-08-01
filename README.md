@@ -60,7 +60,7 @@ config.list(pattern: %r{org\.jdownloader\.plugins\.components\.youtube.*})
 The LinkGrabberV2 endpoint can be used to add and manage download resources.
 Links represent download resources like Videos or Files. They are grouped in packages.
 
-#### Querying links for resources
+#### Crawling links for resources
 Its possible to crawl webpages for downloadable resources and group them into a package.
 
 To add links, construct a `Myjdrb::Structs::AddLinksQueryStorable` and add links to it.
@@ -104,8 +104,8 @@ query = Myjdrb::Structs::LinkQueryStorable.new
 dev.linkgrabberv2.queryLinks(query.to_json)
 =>
 [
-{:name=>"myfile", :packageUUID=>1337, :uuid=>12345},
-{:name=>"another", :packageUUID=>1337, :uuid=>54321},
+{:name=>"myfile", :packageUUID=>7899, :uuid=>12345},
+{:name=>"another", :packageUUID=>7899, :uuid=>54321},
 {:name=>"yet_another_file", :packageUUID=>another_package_uuid, :uuid=>98412},
 ...
 ]

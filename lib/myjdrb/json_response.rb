@@ -3,7 +3,7 @@ require 'json'
 require 'delegate'
 
 module Myjdrb
-  class Response < SimpleDelegator
+  class JsonResponse < SimpleDelegator
     def initialize schema, json_data
       @hash = JSON.parse(json_data, symbolize_names: true)
       @ostruct = OpenStruct.new @hash

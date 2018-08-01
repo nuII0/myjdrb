@@ -1,6 +1,7 @@
 require 'rest-client'
 
-require 'myjdrb/response'
+require 'myjdrb/json_response'
+require 'myjdrb/plain_response'
 require 'myjdrb/exceptions'
 
 module Myjdrb
@@ -32,9 +33,12 @@ module Myjdrb
                              raise "Unknown Request received: #{request.class.to_s}"
                            end
 
-      response = Response.new(endpoint.response_schema, decrypted_response)
-
-      verify_request_id(request.id, response.id)
+      if valid_json?(decrypted_response)
+        response = JsonResponse.new(endpoint.response_schema, decrypted_response)
+        verify_request_id(request.id, response.id)
+      else
+        response = PlainResponse.new(decrypted_response)
+      end
 
       response
     rescue RestClient::ExceptionWithResponse => err
@@ -44,6 +48,9 @@ module Myjdrb
 
     rescue RestClient::RequestFailed => err
       raise Myjdrb::ResponseError.new(request, endpoint.uri, err.message)
+
+    rescue JSON::ParserError => err
+
     end
 
     private
@@ -62,7 +69,8 @@ module Myjdrb
 
       encrypted_response = send_post_request(endpoint.uri, encrypted_data)
 
-      @cipher_device.decrypt(encrypted_response.body)
+      try_decrypt_text(encrypted_response.body)
+      #@cipher_device.decrypt(encrypted_response.body)
     end
 
     def try_decrypt_text(input)
@@ -117,5 +125,13 @@ module Myjdrb
                             payload: data,
                             headers: headers)
     end
+
+    def valid_json?(json)
+      JSON.parse(json)
+      return true
+    rescue JSON::ParserError
+      return false
+    end
+
   end
 end

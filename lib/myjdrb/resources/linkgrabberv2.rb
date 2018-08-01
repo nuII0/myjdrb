@@ -10,13 +10,14 @@ module Myjdrb
 
       define_resource(name: :clearList)
 
-      #define_resource(name: :move_to_downloadlist,
-                      #parameter:
-                      #{
-                        #: { type: [Integer] },
-                        #packageIds: { type: [Integer] },
-                        #key: { type: String }
-                      #})
+      define_resource(name: :help)
+
+      define_resource(name: :moveToDownloadList,
+                      parameter:
+                      {
+                        linkIds: { type: [Integer] },
+                        packageIds: { type: [Integer] },
+                      })
 
       define_resource(name: :addLinks,
                       parameter:
