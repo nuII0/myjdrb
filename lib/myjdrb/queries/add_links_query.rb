@@ -1,8 +1,8 @@
 require 'myjdrb/structs/base'
 
 module Myjdrb
-  module Structs
-    class AddLinksQueryStorable < Base
+  module Queries
+    class AddLinksQuery < Base
       def initialize(
         autostart: false,
         deepDecrypt: false,

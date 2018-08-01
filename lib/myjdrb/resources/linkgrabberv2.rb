@@ -22,13 +22,13 @@ module Myjdrb
       define_resource(name: :addLinks,
                       parameter:
                       {
-                        query: { type: Structs::AddLinksQueryStorable }
+                        query: { type: Struct::AddLinksQuery }
                       })
 
       define_resource(name: :queryPackages,
                       parameter:
                       {
-                        query: { type: Structs::PackageQueryStorable }
+                        query: { type: Struct::PackageQuery }
                       })
 
       define_resource(name: :removeLinks,

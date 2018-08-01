@@ -1,11 +1,10 @@
 # MyJdRb
-This is an unofficial ruby client for the [My.JDownloader API (docs.google.com)](https://docs.google.com/document/d/1IGeAwg8bQyaCTeTl_WyjLyBPh4NBOayO0_MAmvP5Mu4/) which enables management of [JDownloader 2 (jdownloader.org)](http://jdownloader.org/) instances.
+This is an unofficial ruby client for the [My.JDownloader API Documentation](https://my.jdownloader.org/developers/) which enables management of [JDownloader 2 (jdownloader.org)](http://jdownloader.org/) instances.
 
 ## Description
 The gem takes care of authentication and encryption to provide convenient usage of the My.JDownloader API. It uses [REST Client (github.com)](https://github.com/rest-client/rest-client) to make required HTTP calls.
 
-Below are some usage examples. For a complete feature set take a look at the [My.JDownloader API Documentation (docs.google.com)](https://docs.google.com/document/d/1IGeAwg8bQyaCTeTl_WyjLyBPh4NBOayO0_MAmvP5Mu4/)
-
+Below are some usage examples. For a complete feature set take a look at the [My.JDownloader API Documentation](https://my.jdownloader.org/developers/)
 
 ## Example Usage
 Enter your credentials and establish a session to My.JDownloader:
@@ -113,12 +112,12 @@ dev.linkgrabberv2.queryLinks(query.to_json)
 
 Filter by package uuid:
 ```rb
-query = Myjdrb::Structs::LinkQueryStorable.new(packageUUIDs: [1337])
+query = Myjdrb::Structs::LinkQueryStorable.new(packageUUIDs: [7899])
 dev.linkgrabberv2.queryLinks(query.to_json)
 =>
 [
-{:name=>"myfile", :packageUUID=>1337, :uuid=>12345},
-{:name=>"another", :packageUUID=>1337, :uuid=>54321}
+{:name=>"myfile", :packageUUID=>7899, :uuid=>12345},
+{:name=>"another", :packageUUID=>7899, :uuid=>54321}
 ]
 ```
 
@@ -126,7 +125,7 @@ See [`Myjdrb::Structs::LinkQueryStorable`](lib/myjdrb/structs/link_query_storabl
 
 
 ### Other Endpoints
-Besides the options mentioned above, the API offers more Endpoints. Again, consult the [My.JDownloader API Documentation (docs.google.com)](https://docs.google.com/document/d/1IGeAwg8bQyaCTeTl_WyjLyBPh4NBOayO0_MAmvP5Mu4/) to see whats possible.
+Besides the options mentioned above, the API offers more Endpoints. Again, consult the [My.JDownloader API Documentation](https://my.jdownloader.org/developers/) to see whats possible.
 
 For example, the uptime of a running instance:
 ```rb
