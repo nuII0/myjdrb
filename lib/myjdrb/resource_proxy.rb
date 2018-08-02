@@ -40,7 +40,12 @@ module Myjdrb
       "/#{@endpoint_name}/#{path}"
     end
 
-    def define_resource(name:, parameter:{}, &blk)
+    def define_resource(name:, parameter:{},return: nil, &blk)
+      if self.class.methods.any? name
+        # TODO same endpoint with multiple possible parameters
+        require 'pry'; binding.pry
+      end
+
       self.class.define_typed_method(name: name, typed_parameter: parameter) do |arguments|
         uri = build_uri name
         payload = arguments.values.map(&:to_json)

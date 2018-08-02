@@ -2,7 +2,7 @@ require 'myjdrb/structs/base'
 
 module Myjdrb
   module Queries
-    class AdvancedConfigQuery < Base
+    class ApiQuery < Base
       def initialize(
         configInterface:,
         defaultValues:,
