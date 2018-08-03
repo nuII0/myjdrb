@@ -3,7 +3,7 @@ require 'myjdrb/crypto/iv_key'
 require 'myjdrb/crypto/keystore'
 
 require 'myjdrb/session'
-require 'myjdrb/requests/post'
+require 'myjdrb/request/post'
 require 'myjdrb/device'
 require 'myjdrb/util/counter'
 

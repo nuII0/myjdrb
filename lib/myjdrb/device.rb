@@ -1,7 +1,7 @@
 require_relative 'mixin/initializable'
 require_relative 'mixin/member_equality'
 
-require 'myjdrb/resources/generated'
+require 'myjdrb/resource/generated'
 
 module Myjdrb
   # Running JDownloader instances are modeled as devices
@@ -31,7 +31,8 @@ module Myjdrb
     private
 
     def get_resource clazz
-      var = "@#{clazz.downcase}"
+      downcase = clazz.downcase
+      var = "@#{downcase}"
 
       unless instance_variable_defined? var
         instance_variable_set(var, Resource.const_get(clazz).new(sessiontoken: @sessiontoken,

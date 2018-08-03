@@ -1,4 +1,4 @@
-require 'myjdrb/requests/request'
+require 'myjdrb/request/request'
 
 module Myjdrb
   module Requests

@@ -1,0 +1,34 @@
+require 'myjdrb/resource/base'
+
+module Myjdrb
+	module Resource
+<%- ordered_resources.each do |namespace, api_calls| -%>
+		class <%= namespace.capitalize -%> < Base
+			def initialize(device_id:, sessiontoken:, executer:)
+				super( device_id, sessiontoken, executer, "<%= namespace -%>" )
+
+				<%- api_calls.each do |api_call| -%>
+				define_resource(
+					name: :<%= api_call[:endpoint].to_s -%>,
+					parameter:
+					{
+					<%- api_call[:parameter].each_with_index do |param, index| -%>
+						<%= param[:name].to_s -%>:
+						{
+							type: <%= param[:type] %>
+						<%- if (((api_call[:parameter].length) -1).eql? index) -%>
+						}
+						<%- else -%>
+						},
+						<%- end -%>
+					<%- end -%>
+					},
+					return_type: <%= api_call[:return] %>
+				)
+				<%- end -%>
+			end
+		end
+	<%- end -%>
+	end
+end
+

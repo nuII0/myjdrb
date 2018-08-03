@@ -1,0 +1,25 @@
+require 'myjdrb/struct/base'
+require 'myjdrb/enum/generated'
+
+module Myjdrb
+  module Struct
+    <%- structs.each do |struct| -%>
+      class <%= struct[:name] -%> < Base
+        def initialize(
+        <%- struct[:parameter].each_with_index do |param, index| -%>
+          <%- default_value = param[:default] || nil -%>
+          <%- if index == (struct[:parameter].size - 1) -%>
+          <%= param[:name] -%>: <%= default_value %>
+          <%- else -%>
+          <%= param[:name] -%>: <%= default_value %>,
+          <%- end -%>
+        <%- end -%>
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+    <%- end -%>
+  end
+end
+

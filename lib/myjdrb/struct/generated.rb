@@ -1,13 +1,14 @@
-# This file is auto generated
 require 'myjdrb/struct/base'
+require 'myjdrb/enum/generated'
 
 module Myjdrb
   module Struct
       class APIQuery < Base
         def initialize(
           empty: true,
+          forNullKey: "",
           maxResults: -1,
-          startAt: -1
+          startAt: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -15,16 +16,26 @@ module Myjdrb
 
       class Account < Base
         def initialize(
-          enabled: ,
-          errorString: ,
-          errorType: ,
-          hostname: ,
-          trafficLeft: ,
-          trafficMax: ,
-          username: ,
-          uuid: ,
-          valid: ,
-          validUntil: 
+          enabled: true,
+          errorString: "",
+          errorType: "",
+          hostname: "",
+          trafficLeft: 0,
+          trafficMax: 0,
+          username: "",
+          uuid: 0,
+          valid: true,
+          validUntil: 0
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+      class Account < Base
+        def initialize(
+          hostname: "",
+          infoMap: "",
+          uuid: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -49,21 +60,19 @@ module Myjdrb
 
       class AddLinksQuery < Base
         def initialize(
-          assignJobID: false,
-          autoExtract: false,
-          autostart: false,
-          comment: "null",
+          assignJobID: true,
+          autoExtract: true,
+          autostart: true,
           dataURLs: [],
-          deepDecrypt: false,
-          destinationFolder: "null",
-          downloadPassword: "null",
-          extractPassword: "null",
-          links: "null",
-          overwritePackagizerRules: false,
-          packageName: "null",
-          priority: "DEFAULT",
-          sourceUrl: "null",
-          sourceurl: "null"
+          deepDecrypt: true,
+          destinationFolder: "",
+          downloadPassword: "",
+          extractPassword: "",
+          links: "",
+          overwritePackagizerRules: true,
+          packageName: "",
+          priority: Myjdrb::Enum::Priority.new('DEFAULT'),
+          sourceUrl: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -73,13 +82,13 @@ module Myjdrb
         def initialize(
           abstractType: ,
           defaultValue: ,
-          docs: ,
-          enumLabel: ,
+          docs: "",
+          enumLabel: "",
           enumOptions: ,
-          interfaceName: ,
-          key: ,
-          storage: ,
-          type: ,
+          interfaceName: "",
+          key: "",
+          storage: "",
+          type: "",
           value: 
         )
           make_instance_variables method(__method__).parameters, binding
@@ -88,12 +97,12 @@ module Myjdrb
 
       class AdvancedConfigQuery < Base
         def initialize(
-          configInterface: "null",
+          configInterface: "",
           defaultValues: true,
           description: true,
           enumInfo: true,
           includeExtensions: true,
-          pattern: "null",
+          pattern: "",
           values: true
         )
           make_instance_variables method(__method__).parameters, binding
@@ -102,13 +111,13 @@ module Myjdrb
 
       class ArchiveSettings < Base
         def initialize(
-          archiveId: ,
-          autoExtract: ,
-          extractPath: ,
-          finalPassword: ,
-          passwords: ,
-          removeDownloadLinksAfterExtraction: ,
-          removeFilesAfterExtraction: 
+          archiveId: "",
+          autoExtract: true,
+          extractPath: "",
+          finalPassword: "",
+          passwords: [],
+          removeDownloadLinksAfterExtraction: true,
+          removeFilesAfterExtraction: true
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -116,12 +125,12 @@ module Myjdrb
 
       class ArchiveStatus < Base
         def initialize(
-          archiveId: ,
-          archiveName: ,
-          controllerId: ,
+          archiveId: "",
+          archiveName: "",
+          controllerId: 0,
           controllerStatus: ,
-          states: ,
-          type: 
+          states: "",
+          type: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -129,14 +138,14 @@ module Myjdrb
 
       class BasicAuthentication < Base
         def initialize(
-          created: ,
-          enabled: ,
-          hostmask: ,
-          id: ,
-          lastValidated: ,
-          password: ,
+          created: 0,
+          enabled: true,
+          hostmask: "",
+          id: 0,
+          lastValidated: 0,
+          password: "",
           type: ,
-          username: 
+          username: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -144,15 +153,14 @@ module Myjdrb
 
       class CaptchaJob < Base
         def initialize(
-          captchaCategory: ,
-          created: ,
-          explain: ,
-          hoster: ,
-          id: ,
-          link: ,
-          remaining: ,
-          timeout: ,
-          type: 
+          captchaCategory: "",
+          created: 0,
+          explain: "",
+          hoster: "",
+          id: 0,
+          link: 0,
+          timeout: 0,
+          type: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -160,20 +168,19 @@ module Myjdrb
 
       class CnlQuery < Base
         def initialize(
-          autostart: false,
-          comment: "null",
-          crypted: "null",
-          dir: "null",
-          jk: "null",
-          key: "null",
-          orgReferrer: "null",
-          orgSource: "null",
-          packageName: "null",
+          comment: "",
+          crypted: "",
+          dir: "",
+          jk: "",
+          key: "",
+          orgReferrer: "",
+          orgSource: "",
+          packageName: "",
           passwords: [],
           permission: true,
-          referrer: "null",
-          source: "null",
-          urls: "null"
+          referrer: "",
+          source: "",
+          urls: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -182,18 +189,29 @@ module Myjdrb
       class CrawledLink < Base
         def initialize(
           availability: ,
-          bytesTotal: ,
-          comment: ,
-          downloadPassword: ,
-          enabled: ,
-          host: ,
-          name: ,
-          packageUUID: ,
-          priority: ,
-          url: ,
-          uuid: ,
+          bytesTotal: 0,
+          comment: "",
+          downloadPassword: "",
+          enabled: true,
+          host: "",
+          name: "",
+          packageUUID: 0,
+          priority: Myjdrb::Enum::Priority.new('DEFAULT'),
+          url: "",
+          uuid: 0,
           variant: ,
-          variants: 
+          variants: true
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+      class CrawledLink < Base
+        def initialize(
+          infoMap: "",
+          name: "",
+          uniqueID: 0,
+          uuid: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -225,20 +243,30 @@ module Myjdrb
 
       class CrawledPackage < Base
         def initialize(
-          bytesTotal: ,
-          childCount: ,
-          comment: ,
-          downloadPassword: ,
-          enabled: ,
-          hosts: ,
-          name: ,
-          offlineCount: ,
-          onlineCount: ,
-          priority: ,
-          saveTo: ,
-          tempUnknownCount: ,
-          unknownCount: ,
-          uuid: 
+          infoMap: "",
+          name: "",
+          uuid: 0
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+      class CrawledPackage < Base
+        def initialize(
+          bytesTotal: 0,
+          childCount: 0,
+          comment: "",
+          downloadPassword: "",
+          enabled: true,
+          hosts: [],
+          name: "",
+          offlineCount: 0,
+          onlineCount: 0,
+          priority: Myjdrb::Enum::Priority.new('DEFAULT'),
+          saveTo: "",
+          tempUnknownCount: 0,
+          unknownCount: 0,
+          uuid: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -268,8 +296,8 @@ module Myjdrb
 
       class DialogInfo < Base
         def initialize(
-          properties: ,
-          type: 
+          properties: "",
+          type: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -277,8 +305,8 @@ module Myjdrb
 
       class DialogTypeInfo < Base
         def initialize(
-          in: ,
-          out: 
+          in: "",
+          out: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -286,27 +314,37 @@ module Myjdrb
 
       class DownloadLink < Base
         def initialize(
-          addedDate: ,
-          bytesLoaded: ,
-          bytesTotal: ,
-          comment: ,
-          downloadPassword: ,
-          enabled: ,
-          eta: ,
-          extractionStatus: ,
-          finished: ,
-          finishedDate: ,
-          host: ,
-          name: ,
-          packageUUID: ,
-          priority: ,
-          running: ,
-          skipped: ,
-          speed: ,
-          status: ,
-          statusIconKey: ,
-          url: ,
-          uuid: 
+          infoMap: "",
+          name: "",
+          uuid: 0
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+      class DownloadLink < Base
+        def initialize(
+          addedDate: 0,
+          bytesLoaded: 0,
+          bytesTotal: 0,
+          comment: "",
+          downloadPassword: "",
+          enabled: true,
+          eta: 0,
+          extractionStatus: "",
+          finished: true,
+          finishedDate: 0,
+          host: "",
+          name: "",
+          packageUUID: 0,
+          priority: Myjdrb::Enum::Priority.new('DEFAULT'),
+          running: true,
+          skipped: true,
+          speed: 0,
+          status: "",
+          statusIconKey: "",
+          url: "",
+          uuid: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -321,8 +359,8 @@ module Myjdrb
 
       class EnumOption < Base
         def initialize(
-          label: ,
-          name: 
+          label: "",
+          name: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -330,13 +368,13 @@ module Myjdrb
 
       class Extension < Base
         def initialize(
-          configInterface: ,
-          description: ,
-          enabled: ,
-          iconKey: ,
-          id: ,
-          installed: ,
-          name: 
+          configInterface: "",
+          description: "",
+          enabled: true,
+          iconKey: "",
+          id: "",
+          installed: true,
+          name: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -350,7 +388,7 @@ module Myjdrb
           iconKey: true,
           installed: true,
           name: true,
-          pattern: "null"
+          pattern: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -358,9 +396,34 @@ module Myjdrb
 
       class FilePackage < Base
         def initialize(
-          infoMap: ,
-          name: ,
-          uuid: 
+          infoMap: "",
+          name: "",
+          uuid: 0
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+      class FilePackage < Base
+        def initialize(
+          activeTask: "",
+          bytesLoaded: 0,
+          bytesTotal: 0,
+          childCount: 0,
+          comment: "",
+          downloadPassword: "",
+          enabled: true,
+          eta: 0,
+          finished: true,
+          hosts: [],
+          name: "",
+          priority: Myjdrb::Enum::Priority.new('DEFAULT'),
+          running: true,
+          saveTo: "",
+          speed: 0,
+          status: "",
+          statusIconKey: "",
+          uuid: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -368,9 +431,9 @@ module Myjdrb
 
       class IconDescriptor < Base
         def initialize(
-          cls: ,
-          key: ,
-          prps: ,
+          cls: "",
+          key: "",
+          prps: "",
           rsc: 
         )
           make_instance_variables method(__method__).parameters, binding
@@ -379,14 +442,14 @@ module Myjdrb
 
       class JobLinkCrawler < Base
         def initialize(
-          broken: ,
-          checking: ,
-          crawled: ,
-          crawlerId: ,
-          crawling: ,
-          filtered: ,
-          jobId: ,
-          unhandled: 
+          broken: 0,
+          checking: true,
+          crawled: 0,
+          crawlerId: 0,
+          crawling: true,
+          filtered: 0,
+          jobId: 0,
+          unhandled: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -403,7 +466,7 @@ module Myjdrb
 
       class LinkCollectingJob < Base
         def initialize(
-          id: 
+          id: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -448,12 +511,12 @@ module Myjdrb
 
       class LinkStatus < Base
         def initialize(
-          host: ,
-          linkCheckID: ,
-          name: ,
-          size: ,
+          host: "",
+          linkCheckID: "",
+          name: "",
+          size: 0,
           status: ,
-          url: 
+          url: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -461,9 +524,19 @@ module Myjdrb
 
       class LinkVariant < Base
         def initialize(
-          iconKey: ,
-          id: ,
-          name: 
+          iconKey: "",
+          id: "",
+          name: ""
+        )
+          make_instance_variables method(__method__).parameters, binding
+        end
+      end
+
+      class LinkVariant < Base
+        def initialize(
+          iconKey: "",
+          id: "",
+          name: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -471,9 +544,9 @@ module Myjdrb
 
       class LogFolder < Base
         def initialize(
-          created: ,
-          current: ,
-          lastModified: 
+          created: 0,
+          current: true,
+          lastModified: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -482,9 +555,9 @@ module Myjdrb
       class MenuStructure < Base
         def initialize(
           children: ,
-          icon: ,
-          id: ,
-          name: ,
+          icon: "",
+          id: "",
+          name: "",
           type: 
         )
           make_instance_variables method(__method__).parameters, binding
@@ -494,9 +567,9 @@ module Myjdrb
       class MyJDMenuItem < Base
         def initialize(
           children: ,
-          icon: ,
-          id: ,
-          name: ,
+          icon: "",
+          id: "",
+          name: "",
           type: 
         )
           make_instance_variables method(__method__).parameters, binding
@@ -529,19 +602,19 @@ module Myjdrb
       class Plugin < Base
         def initialize(
           abstractType: ,
-          className: ,
+          className: "",
           defaultValue: ,
-          displayName: ,
-          docs: ,
-          enumLabel: ,
+          displayName: "",
+          docs: "",
+          enumLabel: "",
           enumOptions: ,
-          interfaceName: ,
-          key: ,
-          pattern: ,
-          storage: ,
-          type: ,
+          interfaceName: "",
+          key: "",
+          pattern: "",
+          storage: "",
+          type: "",
           value: ,
-          version: 
+          version: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -551,13 +624,13 @@ module Myjdrb
         def initialize(
           abstractType: ,
           defaultValue: ,
-          docs: ,
-          enumLabel: ,
+          docs: "",
+          enumLabel: "",
           enumOptions: ,
-          interfaceName: ,
-          key: ,
-          storage: ,
-          type: ,
+          interfaceName: "",
+          key: "",
+          storage: "",
+          type: "",
           value: 
         )
           make_instance_variables method(__method__).parameters, binding
@@ -575,8 +648,8 @@ module Myjdrb
 
       class PollingResult < Base
         def initialize(
-          eventData: ,
-          eventName: 
+          eventData: "",
+          eventName: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -584,8 +657,8 @@ module Myjdrb
 
       class PublisherResponse < Base
         def initialize(
-          eventids: ,
-          publisher: 
+          eventids: [],
+          publisher: ""
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -593,12 +666,12 @@ module Myjdrb
 
       class SubscriptionResponse < Base
         def initialize(
-          exclusions: ,
-          maxKeepalive: ,
-          maxPolltimeout: ,
-          subscribed: ,
-          subscriptionid: ,
-          subscriptions: 
+          exclusions: [],
+          maxKeepalive: 0,
+          maxPolltimeout: 0,
+          subscribed: true,
+          subscriptionid: 0,
+          subscriptions: []
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -606,9 +679,9 @@ module Myjdrb
 
       class SubscriptionStatusResponse < Base
         def initialize(
-          queueSize: ,
-          subscribed: ,
-          subscriptionid: 
+          queueSize: 0,
+          subscribed: true,
+          subscriptionid: 0
         )
           make_instance_variables method(__method__).parameters, binding
         end
@@ -616,3 +689,4 @@ module Myjdrb
 
   end
 end
+

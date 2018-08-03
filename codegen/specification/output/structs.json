@@ -1,0 +1,1635 @@
+[
+  {
+    "name": "APIQuery",
+    "parameter": [
+      {
+        "name": "empty",
+        "type": "boolean"
+      },
+      {
+        "name": "forNullKey",
+        "type": "V"
+      },
+      {
+        "name": "maxResults",
+        "type": "Integer"
+      },
+      {
+        "name": "startAt",
+        "type": "Integer"
+      }
+    ]
+  },
+  {
+    "name": "Account",
+    "parameter": [
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "errorString",
+        "type": "String"
+      },
+      {
+        "name": "errorType",
+        "type": "String"
+      },
+      {
+        "name": "hostname",
+        "type": "String"
+      },
+      {
+        "name": "trafficLeft",
+        "type": "Long"
+      },
+      {
+        "name": "trafficMax",
+        "type": "Long"
+      },
+      {
+        "name": "username",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "Long"
+      },
+      {
+        "name": "valid",
+        "type": "boolean"
+      },
+      {
+        "name": "validUntil",
+        "type": "Long"
+      }
+    ]
+  },
+  {
+    "name": "Account",
+    "parameter": [
+      {
+        "name": "hostname",
+        "type": "String"
+      },
+      {
+        "name": "infoMap",
+        "type": "JsonMap"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "AccountQuery",
+    "parameter": [
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "error",
+        "type": "boolean"
+      },
+      {
+        "name": "maxResults",
+        "type": "int"
+      },
+      {
+        "name": "startAt",
+        "type": "int"
+      },
+      {
+        "name": "trafficLeft",
+        "type": "boolean"
+      },
+      {
+        "name": "trafficMax",
+        "type": "boolean"
+      },
+      {
+        "name": "userName",
+        "type": "boolean"
+      },
+      {
+        "name": "uuidlist",
+        "type": "UnorderedList<Long>"
+      },
+      {
+        "name": "valid",
+        "type": "boolean"
+      },
+      {
+        "name": "validUntil",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "AddLinksQuery",
+    "parameter": [
+      {
+        "name": "assignJobID",
+        "type": "boolean|null"
+      },
+      {
+        "name": "autoExtract",
+        "type": "boolean|null"
+      },
+      {
+        "name": "autostart",
+        "type": "boolean|null"
+      },
+      {
+        "name": "dataURLs",
+        "type": "String[]"
+      },
+      {
+        "name": "deepDecrypt",
+        "type": "boolean|null"
+      },
+      {
+        "name": "destinationFolder",
+        "type": "String"
+      },
+      {
+        "name": "downloadPassword",
+        "type": "String"
+      },
+      {
+        "name": "extractPassword",
+        "type": "String"
+      },
+      {
+        "name": "links",
+        "type": "String"
+      },
+      {
+        "name": "overwritePackagizerRules",
+        "type": "boolean|null"
+      },
+      {
+        "name": "packageName",
+        "type": "String"
+      },
+      {
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "name": "sourceUrl",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "AdvancedConfigAPIEntry",
+    "parameter": [
+      {
+        "name": "abstractType",
+        "type": "AbstractType"
+      },
+      {
+        "name": "defaultValue",
+        "type": "Object"
+      },
+      {
+        "name": "docs",
+        "type": "String"
+      },
+      {
+        "name": "enumLabel",
+        "type": "String"
+      },
+      {
+        "name": "enumOptions",
+        "type": "String[][]"
+      },
+      {
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "name": "type",
+        "type": "String"
+      },
+      {
+        "name": "value",
+        "type": "Object"
+      }
+    ]
+  },
+  {
+    "name": "AdvancedConfigQuery",
+    "parameter": [
+      {
+        "name": "configInterface",
+        "type": "String"
+      },
+      {
+        "name": "defaultValues",
+        "type": "boolean"
+      },
+      {
+        "name": "description",
+        "type": "boolean"
+      },
+      {
+        "name": "enumInfo",
+        "type": "boolean"
+      },
+      {
+        "name": "includeExtensions",
+        "type": "boolean"
+      },
+      {
+        "name": "pattern",
+        "type": "String"
+      },
+      {
+        "name": "values",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "ArchiveSettings",
+    "parameter": [
+      {
+        "name": "archiveId",
+        "type": "String"
+      },
+      {
+        "name": "autoExtract",
+        "type": "boolean|null"
+      },
+      {
+        "name": "extractPath",
+        "type": "String"
+      },
+      {
+        "name": "finalPassword",
+        "type": "String"
+      },
+      {
+        "name": "passwords",
+        "type": "List<String>"
+      },
+      {
+        "name": "removeDownloadLinksAfterExtraction",
+        "type": "boolean|null"
+      },
+      {
+        "name": "removeFilesAfterExtraction",
+        "type": "boolean|null"
+      }
+    ]
+  },
+  {
+    "name": "ArchiveStatus",
+    "parameter": [
+      {
+        "name": "archiveId",
+        "type": "String"
+      },
+      {
+        "name": "archiveName",
+        "type": "String"
+      },
+      {
+        "name": "controllerId",
+        "type": "long"
+      },
+      {
+        "name": "controllerStatus",
+        "type": "ControllerStatus"
+      },
+      {
+        "name": "states",
+        "type": "Map<String, ArchiveFileStatus>"
+      },
+      {
+        "name": "type",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "BasicAuthentication",
+    "parameter": [
+      {
+        "name": "created",
+        "type": "long"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "hostmask",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "name": "lastValidated",
+        "type": "long"
+      },
+      {
+        "name": "password",
+        "type": "String"
+      },
+      {
+        "name": "type",
+        "type": "Type"
+      },
+      {
+        "name": "username",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "CaptchaJob",
+    "parameter": [
+      {
+        "name": "captchaCategory",
+        "type": "String"
+      },
+      {
+        "name": "created",
+        "type": "long"
+      },
+      {
+        "name": "explain",
+        "type": "String"
+      },
+      {
+        "name": "hoster",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "name": "link",
+        "type": "long"
+      },
+      {
+        "name": "timeout",
+        "type": "int"
+      },
+      {
+        "name": "type",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "CnlQuery",
+    "parameter": [
+      {
+        "name": "comment",
+        "type": "String"
+      },
+      {
+        "name": "crypted",
+        "type": "String"
+      },
+      {
+        "name": "dir",
+        "type": "String"
+      },
+      {
+        "name": "jk",
+        "type": "String"
+      },
+      {
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "name": "orgReferrer",
+        "type": "String"
+      },
+      {
+        "name": "orgSource",
+        "type": "String"
+      },
+      {
+        "name": "packageName",
+        "type": "String"
+      },
+      {
+        "name": "passwords",
+        "type": "List<String>"
+      },
+      {
+        "name": "permission",
+        "type": "boolean"
+      },
+      {
+        "name": "referrer",
+        "type": "String"
+      },
+      {
+        "name": "source",
+        "type": "String"
+      },
+      {
+        "name": "urls",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "CrawledLink",
+    "parameter": [
+      {
+        "name": "availability",
+        "type": "AvailableLinkState"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "long"
+      },
+      {
+        "name": "comment",
+        "type": "String"
+      },
+      {
+        "name": "downloadPassword",
+        "type": "String"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "host",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "packageUUID",
+        "type": "long"
+      },
+      {
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "name": "url",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      },
+      {
+        "name": "variant",
+        "type": "LinkVariant"
+      },
+      {
+        "name": "variants",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "CrawledLink",
+    "parameter": [
+      {
+        "name": "infoMap",
+        "type": "JsonMap"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "uniqueID",
+        "type": "Long"
+      },
+      {
+        "name": "uuid",
+        "type": "Long"
+      }
+    ]
+  },
+  {
+    "name": "CrawledLinkQuery",
+    "parameter": [
+      {
+        "name": "availability",
+        "type": "boolean"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "boolean"
+      },
+      {
+        "name": "comment",
+        "type": "boolean"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "host",
+        "type": "boolean"
+      },
+      {
+        "name": "jobUUIDs",
+        "type": "long[]"
+      },
+      {
+        "name": "maxResults",
+        "type": "int"
+      },
+      {
+        "name": "packageUUIDs",
+        "type": "long[]"
+      },
+      {
+        "name": "password",
+        "type": "boolean"
+      },
+      {
+        "name": "priority",
+        "type": "boolean"
+      },
+      {
+        "name": "startAt",
+        "type": "int"
+      },
+      {
+        "name": "status",
+        "type": "boolean"
+      },
+      {
+        "name": "url",
+        "type": "boolean"
+      },
+      {
+        "name": "variantID",
+        "type": "boolean"
+      },
+      {
+        "name": "variantIcon",
+        "type": "boolean"
+      },
+      {
+        "name": "variantName",
+        "type": "boolean"
+      },
+      {
+        "name": "variants",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "CrawledPackage",
+    "parameter": [
+      {
+        "name": "infoMap",
+        "type": "JsonMap"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "CrawledPackage",
+    "parameter": [
+      {
+        "name": "bytesTotal",
+        "type": "long"
+      },
+      {
+        "name": "childCount",
+        "type": "int"
+      },
+      {
+        "name": "comment",
+        "type": "String"
+      },
+      {
+        "name": "downloadPassword",
+        "type": "String"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "hosts",
+        "type": "String[]"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "offlineCount",
+        "type": "int"
+      },
+      {
+        "name": "onlineCount",
+        "type": "int"
+      },
+      {
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "name": "saveTo",
+        "type": "String"
+      },
+      {
+        "name": "tempUnknownCount",
+        "type": "int"
+      },
+      {
+        "name": "unknownCount",
+        "type": "int"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "CrawledPackageQuery",
+    "parameter": [
+      {
+        "name": "availableOfflineCount",
+        "type": "boolean"
+      },
+      {
+        "name": "availableOnlineCount",
+        "type": "boolean"
+      },
+      {
+        "name": "availableTempUnknownCount",
+        "type": "boolean"
+      },
+      {
+        "name": "availableUnknownCount",
+        "type": "boolean"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "boolean"
+      },
+      {
+        "name": "childCount",
+        "type": "boolean"
+      },
+      {
+        "name": "comment",
+        "type": "boolean"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "hosts",
+        "type": "boolean"
+      },
+      {
+        "name": "maxResults",
+        "type": "int"
+      },
+      {
+        "name": "packageUUIDs",
+        "type": "long[]"
+      },
+      {
+        "name": "priority",
+        "type": "boolean"
+      },
+      {
+        "name": "saveTo",
+        "type": "boolean"
+      },
+      {
+        "name": "startAt",
+        "type": "int"
+      },
+      {
+        "name": "status",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "DialogInfo",
+    "parameter": [
+      {
+        "name": "properties",
+        "type": "Map<String, String>"
+      },
+      {
+        "name": "type",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "DialogTypeInfo",
+    "parameter": [
+      {
+        "name": "in",
+        "type": "Map<String, String>"
+      },
+      {
+        "name": "out",
+        "type": "Map<String, String>"
+      }
+    ]
+  },
+  {
+    "name": "DownloadLink",
+    "parameter": [
+      {
+        "name": "infoMap",
+        "type": "JsonMap"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "DownloadLink",
+    "parameter": [
+      {
+        "name": "addedDate",
+        "type": "long"
+      },
+      {
+        "name": "bytesLoaded",
+        "type": "long"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "long"
+      },
+      {
+        "name": "comment",
+        "type": "String"
+      },
+      {
+        "name": "downloadPassword",
+        "type": "String"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "eta",
+        "type": "long"
+      },
+      {
+        "name": "extractionStatus",
+        "type": "String"
+      },
+      {
+        "name": "finished",
+        "type": "boolean"
+      },
+      {
+        "name": "finishedDate",
+        "type": "long"
+      },
+      {
+        "name": "host",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "packageUUID",
+        "type": "long"
+      },
+      {
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "name": "running",
+        "type": "boolean"
+      },
+      {
+        "name": "skipped",
+        "type": "boolean"
+      },
+      {
+        "name": "speed",
+        "type": "long"
+      },
+      {
+        "name": "status",
+        "type": "String"
+      },
+      {
+        "name": "statusIconKey",
+        "type": "String"
+      },
+      {
+        "name": "url",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "DownloadListDiff",
+    "parameter": [
+
+    ]
+  },
+  {
+    "name": "EnumOption",
+    "parameter": [
+      {
+        "name": "label",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "Extension",
+    "parameter": [
+      {
+        "name": "configInterface",
+        "type": "String"
+      },
+      {
+        "name": "description",
+        "type": "String"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "iconKey",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "String"
+      },
+      {
+        "name": "installed",
+        "type": "boolean"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "ExtensionQuery",
+    "parameter": [
+      {
+        "name": "configInterface",
+        "type": "boolean"
+      },
+      {
+        "name": "description",
+        "type": "boolean"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "iconKey",
+        "type": "boolean"
+      },
+      {
+        "name": "installed",
+        "type": "boolean"
+      },
+      {
+        "name": "name",
+        "type": "boolean"
+      },
+      {
+        "name": "pattern",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "FilePackage",
+    "parameter": [
+      {
+        "name": "infoMap",
+        "type": "JsonMap"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "FilePackage",
+    "parameter": [
+      {
+        "name": "activeTask",
+        "type": "String"
+      },
+      {
+        "name": "bytesLoaded",
+        "type": "long"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "long"
+      },
+      {
+        "name": "childCount",
+        "type": "int"
+      },
+      {
+        "name": "comment",
+        "type": "String"
+      },
+      {
+        "name": "downloadPassword",
+        "type": "String"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "eta",
+        "type": "long"
+      },
+      {
+        "name": "finished",
+        "type": "boolean"
+      },
+      {
+        "name": "hosts",
+        "type": "String[]"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "name": "running",
+        "type": "boolean"
+      },
+      {
+        "name": "saveTo",
+        "type": "String"
+      },
+      {
+        "name": "speed",
+        "type": "long"
+      },
+      {
+        "name": "status",
+        "type": "String"
+      },
+      {
+        "name": "statusIconKey",
+        "type": "String"
+      },
+      {
+        "name": "uuid",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "IconDescriptor",
+    "parameter": [
+      {
+        "name": "cls",
+        "type": "String"
+      },
+      {
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "name": "prps",
+        "type": "Map<String, Object>"
+      },
+      {
+        "name": "rsc",
+        "type": "List<IconDescriptor>"
+      }
+    ]
+  },
+  {
+    "name": "JobLinkCrawler",
+    "parameter": [
+      {
+        "name": "broken",
+        "type": "int"
+      },
+      {
+        "name": "checking",
+        "type": "boolean"
+      },
+      {
+        "name": "crawled",
+        "type": "int"
+      },
+      {
+        "name": "crawlerId",
+        "type": "long"
+      },
+      {
+        "name": "crawling",
+        "type": "boolean"
+      },
+      {
+        "name": "filtered",
+        "type": "int"
+      },
+      {
+        "name": "jobId",
+        "type": "long"
+      },
+      {
+        "name": "unhandled",
+        "type": "int"
+      }
+    ]
+  },
+  {
+    "name": "LinkCheckResult",
+    "parameter": [
+      {
+        "name": "links",
+        "type": "List<LinkStatus>"
+      },
+      {
+        "name": "status",
+        "type": "STATUS"
+      }
+    ]
+  },
+  {
+    "name": "LinkCollectingJob",
+    "parameter": [
+      {
+        "name": "id",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "LinkCrawlerJobsQuery",
+    "parameter": [
+      {
+        "name": "collectorInfo",
+        "type": "boolean"
+      },
+      {
+        "name": "jobIds",
+        "type": "long[]"
+      }
+    ]
+  },
+  {
+    "name": "LinkQuery",
+    "parameter": [
+      {
+        "name": "addedDate",
+        "type": "boolean"
+      },
+      {
+        "name": "bytesLoaded",
+        "type": "boolean"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "boolean"
+      },
+      {
+        "name": "comment",
+        "type": "boolean"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "eta",
+        "type": "boolean"
+      },
+      {
+        "name": "extractionStatus",
+        "type": "boolean"
+      },
+      {
+        "name": "finished",
+        "type": "boolean"
+      },
+      {
+        "name": "finishedDate",
+        "type": "boolean"
+      },
+      {
+        "name": "host",
+        "type": "boolean"
+      },
+      {
+        "name": "jobUUIDs",
+        "type": "long[]"
+      },
+      {
+        "name": "maxResults",
+        "type": "int"
+      },
+      {
+        "name": "packageUUIDs",
+        "type": "long[]"
+      },
+      {
+        "name": "password",
+        "type": "boolean"
+      },
+      {
+        "name": "priority",
+        "type": "boolean"
+      },
+      {
+        "name": "running",
+        "type": "boolean"
+      },
+      {
+        "name": "skipped",
+        "type": "boolean"
+      },
+      {
+        "name": "speed",
+        "type": "boolean"
+      },
+      {
+        "name": "startAt",
+        "type": "int"
+      },
+      {
+        "name": "status",
+        "type": "boolean"
+      },
+      {
+        "name": "url",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "LinkStatus",
+    "parameter": [
+      {
+        "name": "host",
+        "type": "String"
+      },
+      {
+        "name": "linkCheckID",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "size",
+        "type": "long"
+      },
+      {
+        "name": "status",
+        "type": "AvailableLinkState"
+      },
+      {
+        "name": "url",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "LinkVariant",
+    "parameter": [
+      {
+        "name": "iconKey",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "LinkVariant",
+    "parameter": [
+      {
+        "name": "iconKey",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "LogFolder",
+    "parameter": [
+      {
+        "name": "created",
+        "type": "long"
+      },
+      {
+        "name": "current",
+        "type": "boolean"
+      },
+      {
+        "name": "lastModified",
+        "type": "long"
+      }
+    ]
+  },
+  {
+    "name": "MenuStructure",
+    "parameter": [
+      {
+        "name": "children",
+        "type": "List<MenuStructure>"
+      },
+      {
+        "name": "icon",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "type",
+        "type": "Type"
+      }
+    ]
+  },
+  {
+    "name": "MyJDMenuItem",
+    "parameter": [
+      {
+        "name": "children",
+        "type": "List<MenuStructure>"
+      },
+      {
+        "name": "icon",
+        "type": "String"
+      },
+      {
+        "name": "id",
+        "type": "String"
+      },
+      {
+        "name": "name",
+        "type": "String"
+      },
+      {
+        "name": "type",
+        "type": "Type"
+      }
+    ]
+  },
+  {
+    "name": "PackageQuery",
+    "parameter": [
+      {
+        "name": "bytesLoaded",
+        "type": "boolean"
+      },
+      {
+        "name": "bytesTotal",
+        "type": "boolean"
+      },
+      {
+        "name": "childCount",
+        "type": "boolean"
+      },
+      {
+        "name": "comment",
+        "type": "boolean"
+      },
+      {
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "name": "eta",
+        "type": "boolean"
+      },
+      {
+        "name": "finished",
+        "type": "boolean"
+      },
+      {
+        "name": "hosts",
+        "type": "boolean"
+      },
+      {
+        "name": "maxResults",
+        "type": "int"
+      },
+      {
+        "name": "packageUUIDs",
+        "type": "long[]"
+      },
+      {
+        "name": "priority",
+        "type": "boolean"
+      },
+      {
+        "name": "running",
+        "type": "boolean"
+      },
+      {
+        "name": "saveTo",
+        "type": "boolean"
+      },
+      {
+        "name": "speed",
+        "type": "boolean"
+      },
+      {
+        "name": "startAt",
+        "type": "int"
+      },
+      {
+        "name": "status",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "Plugin",
+    "parameter": [
+      {
+        "name": "abstractType",
+        "type": "AbstractType"
+      },
+      {
+        "name": "className",
+        "type": "String"
+      },
+      {
+        "name": "defaultValue",
+        "type": "Object"
+      },
+      {
+        "name": "displayName",
+        "type": "String"
+      },
+      {
+        "name": "docs",
+        "type": "String"
+      },
+      {
+        "name": "enumLabel",
+        "type": "String"
+      },
+      {
+        "name": "enumOptions",
+        "type": "String[][]"
+      },
+      {
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "name": "pattern",
+        "type": "String"
+      },
+      {
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "name": "type",
+        "type": "String"
+      },
+      {
+        "name": "value",
+        "type": "Object"
+      },
+      {
+        "name": "version",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "PluginConfigEntry",
+    "parameter": [
+      {
+        "name": "abstractType",
+        "type": "AbstractType"
+      },
+      {
+        "name": "defaultValue",
+        "type": "Object"
+      },
+      {
+        "name": "docs",
+        "type": "String"
+      },
+      {
+        "name": "enumLabel",
+        "type": "String"
+      },
+      {
+        "name": "enumOptions",
+        "type": "String[][]"
+      },
+      {
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "name": "type",
+        "type": "String"
+      },
+      {
+        "name": "value",
+        "type": "Object"
+      }
+    ]
+  },
+  {
+    "name": "PluginsQuery",
+    "parameter": [
+      {
+        "name": "pattern",
+        "type": "boolean"
+      },
+      {
+        "name": "version",
+        "type": "boolean"
+      }
+    ]
+  },
+  {
+    "name": "PollingResult",
+    "parameter": [
+      {
+        "name": "eventData",
+        "type": "JsonMap"
+      },
+      {
+        "name": "eventName",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "PublisherResponse",
+    "parameter": [
+      {
+        "name": "eventids",
+        "type": "String[]"
+      },
+      {
+        "name": "publisher",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "SubscriptionResponse",
+    "parameter": [
+      {
+        "name": "exclusions",
+        "type": "String[]"
+      },
+      {
+        "name": "maxKeepalive",
+        "type": "long"
+      },
+      {
+        "name": "maxPolltimeout",
+        "type": "long"
+      },
+      {
+        "name": "subscribed",
+        "type": "boolean"
+      },
+      {
+        "name": "subscriptionid",
+        "type": "long"
+      },
+      {
+        "name": "subscriptions",
+        "type": "String[]"
+      }
+    ]
+  },
+  {
+    "name": "SubscriptionStatusResponse",
+    "parameter": [
+      {
+        "name": "queueSize",
+        "type": "int"
+      },
+      {
+        "name": "subscribed",
+        "type": "boolean"
+      },
+      {
+        "name": "subscriptionid",
+        "type": "long"
+      }
+    ]
+  }
+]

@@ -1,0 +1,157 @@
+[
+  {
+    "name": "AbstractType",
+    "fields": [
+      "BOOLEAN",
+      "INT",
+      "LONG",
+      "STRING",
+      "OBJECT",
+      "OBJECT_LIST",
+      "STRING_LIST",
+      "ENUM",
+      "BYTE",
+      "CHAR",
+      "DOUBLE",
+      "FLOAT",
+      "SHORT",
+      "BOOLEAN_LIST",
+      "BYTE_LIST",
+      "SHORT_LIST",
+      "LONG_LIST",
+      "INT_LIST",
+      "FLOAT_LIST",
+      "ENUM_LIST",
+      "DOUBLE_LIST",
+      "CHAR_LIST",
+      "UNKNOWN",
+      "HEX_COLOR",
+      "HEX_COLOR_LIST",
+      "ACTION"
+    ]
+  },
+  {
+    "name": "Action",
+    "fields": [
+      "DELETE_ALL",
+      "DELETE_DISABLED",
+      "DELETE_FAILED",
+      "DELETE_FINISHED",
+      "DELETE_OFFLINE",
+      "DELETE_DUPE",
+      "DELETE_MODE"
+    ]
+  },
+  {
+    "name": "ArchiveFileStatus",
+    "fields": [
+      "COMPLETE",
+      "INCOMPLETE",
+      "MISSING"
+    ]
+  },
+  {
+    "name": "AvailableLinkState",
+    "fields": [
+      "ONLINE",
+      "OFFLINE",
+      "UNKNOWN",
+      "TEMP_UNKNOWN"
+    ]
+  },
+  {
+    "name": "Context",
+    "fields": [
+      "LGC",
+      "DLC"
+    ]
+  },
+  {
+    "name": "ControllerStatus",
+    "fields": [
+      "RUNNING",
+      "QUEUED",
+      "NA"
+    ]
+  },
+  {
+    "name": "Mode",
+    "fields": [
+      "REMOVE_LINKS_AND_DELETE_FILES",
+      "REMOVE_LINKS_AND_RECYCLE_FILES",
+      "REMOVE_LINKS_ONLY"
+    ]
+  },
+  {
+    "name": "Priority",
+    "fields": [
+      "HIGHEST",
+      "HIGHER",
+      "HIGH",
+      "DEFAULT",
+      "LOW",
+      "LOWER",
+      "LOWEST"
+    ]
+  },
+  {
+    "name": "Reason",
+    "fields": [
+      "CONNECTION_UNAVAILABLE",
+      "TOO_MANY_RETRIES",
+      "CAPTCHA",
+      "MANUAL",
+      "DISK_FULL",
+      "NO_ACCOUNT",
+      "INVALID_DESTINATION",
+      "FILE_EXISTS",
+      "UPDATE_RESTART_REQUIRED",
+      "FFMPEG_MISSING",
+      "FFPROBE_MISSING"
+    ]
+  },
+  {
+    "name": "STATUS",
+    "fields": [
+      "NA",
+      "PENDING",
+      "FINISHED"
+    ]
+  },
+  {
+    "name": "SelectionType",
+    "fields": [
+      "SELECTED",
+      "UNSELECTED",
+      "ALL",
+      "NONE"
+    ]
+  },
+  {
+    "name": "SkipRequest",
+    "fields": [
+      "SINGLE",
+      "BLOCK_HOSTER",
+      "BLOCK_ALL_CAPTCHAS",
+      "BLOCK_PACKAGE",
+      "REFRESH",
+      "STOP_CURRENT_ACTION",
+      "TIMEOUT"
+    ]
+  },
+  {
+    "name": "Type",
+    "fields": [
+      "CONTAINER",
+      "ACTION",
+      "LINK"
+    ]
+  },
+  {
+    "name": "Type",
+    "fields": [
+      "FTP",
+      "HTTP"
+    ]
+  }
+]

@@ -1,0 +1,3734 @@
+[
+  {
+    "namespace": "captcha",
+    "endpoint": "getCaptcha",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "/captcha/getCaptcha"
+  },
+  {
+    "namespace": "root",
+    "endpoint": "flash",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "root",
+    "endpoint": "crossdomain",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "root",
+    "endpoint": "favicon",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "root",
+    "endpoint": "flashgot",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "root",
+    "endpoint": "jdcheck",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "root",
+    "endpoint": "jdcheckjson",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "addAccount",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "premiumHoster",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "username",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "disableAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "enableAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "getAccountInfo",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "Account"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "getPremiumHosterUrl",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "hoster",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "listPremiumHoster",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<String>"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "listPremiumHosterUrls",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "JsonMap"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "premiumHosterIcon",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "premiumHoster",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "queryAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<Account>"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "removeAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "Long[]"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "setEnabledState",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "order": "2",
+        "name": "ids",
+        "type": "Long[]"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accounts",
+    "endpoint": "updateAccount",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "accountId",
+        "type": "Long"
+      },
+      {
+        "order": "2",
+        "name": "username",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "addAccount",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "premiumHoster",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "username",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "addBasicAuth",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "type",
+        "type": "Type"
+      },
+      {
+        "order": "2",
+        "name": "hostmask",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "username",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "disableAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "enableAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "getPremiumHosterUrl",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "hoster",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "listAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "AccountQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<Account>"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "listBasicAuth",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<BasicAuthentication>"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "listPremiumHoster",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<String>"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "listPremiumHosterUrls",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "Map<String, String>"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "refreshAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "removeAccounts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "removeBasicAuths",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "ids",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "setUserNameAndPassword",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "accountId",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "username",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "accountsV2",
+    "endpoint": "updateBasicAuth",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "updatedEntry",
+        "type": "BasicAuthentication"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "get",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      }
+    ],
+    "description": "Returns Captcha Image as Base64 encoded data url",
+    "return": null
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "get",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "format",
+        "type": "String"
+      }
+    ],
+    "description": "Returns Captcha Image as Base64 encoded data url",
+    "return": null
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "getCaptchaJob",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      }
+    ],
+    "description": "Returns CaptchaJob Object for the given id",
+    "return": "CaptchaJob"
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "list",
+    "parameter": [
+
+    ],
+    "description": "returns a list of all available captcha jobs",
+    "return": "List<CaptchaJob>"
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "skip",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "type",
+        "type": "SkipRequest"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "skip",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "solve",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "result",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "resultFormat",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "captcha",
+    "endpoint": "solve",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "result",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "captchaforward",
+    "endpoint": "createJobRecaptchaV2",
+    "parameter": [
+      {
+        "order": "1",
+        "name": " String",
+        "type": null
+      },
+      {
+        "order": "2",
+        "name": " String",
+        "type": null
+      },
+      {
+        "order": "3",
+        "name": " String",
+        "type": null
+      },
+      {
+        "order": "4",
+        "name": " String",
+        "type": null
+      }
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "captchaforward",
+    "endpoint": "getResult",
+    "parameter": [
+      {
+        "order": "1",
+        "name": " long",
+        "type": null
+      }
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "get",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      }
+    ],
+    "description": "get value from interface by key",
+    "return": "Object"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "getDefault",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      }
+    ],
+    "description": "get default value from interface by key",
+    "return": "Object"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "list",
+    "parameter": [
+
+    ],
+    "description": "list all available config entries",
+    "return": "List<AdvancedConfigAPIEntry>"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "list",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "pattern",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "returnDescription",
+        "type": "boolean"
+      },
+      {
+        "order": "3",
+        "name": "returnValues",
+        "type": "boolean"
+      },
+      {
+        "order": "4",
+        "name": "returnDefaultValues",
+        "type": "boolean"
+      },
+      {
+        "order": "5",
+        "name": "returnEnumInfo",
+        "type": "boolean"
+      }
+    ],
+    "description": "list entries based on the pattern regex",
+    "return": "List<AdvancedConfigAPIEntry>"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "list",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "pattern",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "returnDescription",
+        "type": "boolean"
+      },
+      {
+        "order": "3",
+        "name": "returnValues",
+        "type": "boolean"
+      },
+      {
+        "order": "4",
+        "name": "returnDefaultValues",
+        "type": "boolean"
+      }
+    ],
+    "description": "DEPRECATED! list entries based on the pattern regex",
+    "return": "List<AdvancedConfigAPIEntry>"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "listEnum",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "type",
+        "type": "String"
+      }
+    ],
+    "description": "list all possible enum values",
+    "return": "List<EnumOption>"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "query",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "AdvancedConfigQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<AdvancedConfigAPIEntry>"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "reset",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      }
+    ],
+    "description": "reset interface by key to its default value",
+    "return": "boolean"
+  },
+  {
+    "namespace": "config",
+    "endpoint": "set",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "storage",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "value",
+        "type": "Object"
+      }
+    ],
+    "description": "set value to interface by key",
+    "return": "boolean"
+  },
+  {
+    "namespace": "content",
+    "endpoint": "favicon",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "hostername",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "content",
+    "endpoint": "fileIcon",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "filename",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "contentV2",
+    "endpoint": "getFavIcon",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "hostername",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "contentV2",
+    "endpoint": "getFileIcon",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "filename",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "contentV2",
+    "endpoint": "getIcon",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "size",
+        "type": "int"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "contentV2",
+    "endpoint": "getIconDescription",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "key",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "IconDescriptor"
+  },
+  {
+    "namespace": "device",
+    "endpoint": "getDirectConnectionInfos",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "DirectConnectionInfos"
+  },
+  {
+    "namespace": "device",
+    "endpoint": "getSessionPublicKey",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "device",
+    "endpoint": "ping",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "dialogs",
+    "endpoint": "answer",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "data",
+        "type": "Map"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "dialogs",
+    "endpoint": "get",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "icon",
+        "type": "boolean"
+      },
+      {
+        "order": "3",
+        "name": "properties",
+        "type": "boolean"
+      }
+    ],
+    "description": null,
+    "return": "DialogInfo"
+  },
+  {
+    "namespace": "dialogs",
+    "endpoint": "getTypeInfo",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "dialogType",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "DialogTypeInfo"
+  },
+  {
+    "namespace": "dialogs",
+    "endpoint": "list",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "long[]"
+  },
+  {
+    "namespace": "downloadcontroller",
+    "endpoint": "forceDownload",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadcontroller",
+    "endpoint": "getCurrentState",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "downloadcontroller",
+    "endpoint": "getSpeedInBps",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "downloadcontroller",
+    "endpoint": "pause",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "value",
+        "type": "boolean"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloadcontroller",
+    "endpoint": "start",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloadcontroller",
+    "endpoint": "stop",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloadevents",
+    "endpoint": "queryLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "LinkQuery"
+      },
+      {
+        "order": "2",
+        "name": "diffID",
+        "type": "int"
+      }
+    ],
+    "description": null,
+    "return": "DownloadListDiff"
+  },
+  {
+    "namespace": "downloadevents",
+    "endpoint": "setStatusEventInterval",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "channelID",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "interval",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "disableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "disableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "enableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "enableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "forceDownload",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "forceDownload",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "getChildrenChanged",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "structureWatermark",
+        "type": "Long"
+      }
+    ],
+    "description": null,
+    "return": "Long"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "getJDState",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "moveLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "movePackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "packageCount",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "pause",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "value",
+        "type": "boolean|null"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "queryLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<DownloadLink>"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "queryPackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<FilePackage>"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "removeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "removeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "renamePackage",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageId",
+        "type": "Long"
+      },
+      {
+        "order": "2",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "resetLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "resetLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "speed",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "start",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloads",
+    "endpoint": "stop",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "cleanup",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "action",
+        "type": "Action"
+      },
+      {
+        "order": "4",
+        "name": "mode",
+        "type": "Mode"
+      },
+      {
+        "order": "5",
+        "name": "selectionType",
+        "type": "SelectionType"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "forceDownload",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "getDownloadUrls",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "urlDisplayType",
+        "type": "UrlDisplayTypeStorable[]"
+      }
+    ],
+    "description": null,
+    "return": "Map<String, List<Long>>"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "getStopMark",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "getStopMarkedLink",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "DownloadLink"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "getStructureChangeCounter",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "oldCounterValue",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "moveLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "afterLinkID",
+        "type": "long"
+      },
+      {
+        "order": "3",
+        "name": "destPackageID",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "movePackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "afterDestPackageId",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "movetoNewPackage",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "pkgIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "newPkgName",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "downloadPath",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "packageCount",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "queryLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "LinkQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<DownloadLink>"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "queryPackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "PackageQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<FilePackage>"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "removeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "removeStopMark",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "renameLink",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkId",
+        "type": "Long"
+      },
+      {
+        "order": "2",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "renamePackage",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageId",
+        "type": "Long"
+      },
+      {
+        "order": "2",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "resetLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "resumeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "setDownloadDirectory",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "directory",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "setDownloadPassword",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "pass",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "setEnabled",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "order": "2",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "setPriority",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "order": "2",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "setStopMark",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkId",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "packageId",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "splitPackageByHoster",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "pkgIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "startOnlineStatusCheck",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "downloadsV2",
+    "endpoint": "unskip",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "filterByReason",
+        "type": "Reason"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "addsubscription",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "subscriptions",
+        "type": "String[]"
+      },
+      {
+        "order": "3",
+        "name": "exclusions",
+        "type": "String[]"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "changesubscriptiontimeouts",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "polltimeout",
+        "type": "long"
+      },
+      {
+        "order": "3",
+        "name": "maxkeepalive",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "getsubscription",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "getsubscriptionstatus",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionStatusResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "listen",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "events",
+    "endpoint": "listpublisher",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<PublisherResponse>"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "removesubscription",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "subscriptions",
+        "type": "String[]"
+      },
+      {
+        "order": "3",
+        "name": "exclusions",
+        "type": "String[]"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "setsubscription",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "subscriptions",
+        "type": "String[]"
+      },
+      {
+        "order": "3",
+        "name": "exclusions",
+        "type": "String[]"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "subscribe",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptions",
+        "type": "String[]"
+      },
+      {
+        "order": "2",
+        "name": "exclusions",
+        "type": "String[]"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "events",
+    "endpoint": "unsubscribe",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "subscriptionid",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "SubscriptionResponse"
+  },
+  {
+    "namespace": "extensions",
+    "endpoint": "install",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "extensions",
+    "endpoint": "isEnabled",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "classname",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "extensions",
+    "endpoint": "isInstalled",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "id",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "extensions",
+    "endpoint": "list",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "ExtensionQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<Extension>"
+  },
+  {
+    "namespace": "extensions",
+    "endpoint": "setEnabled",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "classname",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "b",
+        "type": "boolean"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "addArchivePassword",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "cancelExtraction",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "controllerID",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "getArchiveInfo",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": "List<ArchiveStatus>"
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "getArchiveSettings",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "archiveIds",
+        "type": "String[]"
+      }
+    ],
+    "description": null,
+    "return": "List<ArchiveSettings>"
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "getQueue",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<ArchiveStatus>"
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "setArchiveSettings",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "archiveId",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "archiveSettings",
+        "type": "ArchiveSettings"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "extraction",
+    "endpoint": "startExtractionNow",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": "Map<String, boolean|null>"
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "add",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "password",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "source",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "url",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "add",
+    "parameter": [
+      {
+        "order": "1",
+        "name": " String",
+        "type": null
+      },
+      {
+        "order": "2",
+        "name": " String",
+        "type": null
+      },
+      {
+        "order": "3",
+        "name": " String",
+        "type": null
+      },
+      {
+        "order": "4",
+        "name": " String",
+        "type": null
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "add",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "addcnl",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "cnl",
+        "type": "CnlQuery"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "addcrypted",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "addcrypted2",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "flash",
+    "endpoint": "addcrypted2Remote",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "crypted",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "jk",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "k",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "root",
+    "endpoint": "flash",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "jd",
+    "endpoint": "doSomethingCool",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "jd",
+    "endpoint": "getCoreRevision",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "Integer"
+  },
+  {
+    "namespace": "jd",
+    "endpoint": "refreshPlugins",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "jd",
+    "endpoint": "sum",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "a",
+        "type": "int"
+      },
+      {
+        "order": "2",
+        "name": "b",
+        "type": "int"
+      }
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "jd",
+    "endpoint": "uptime",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "jd",
+    "endpoint": "version",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "addContainer",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "type",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "content",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "addLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "link",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "packageName",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "archivePassword",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "linkPassword",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "addLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "links",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "packageName",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "extractPassword",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "downloadPassword",
+        "type": "String"
+      },
+      {
+        "order": "5",
+        "name": "destinationFolder",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "addLinksAndStartDownload",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "links",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "packageName",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "extractPassword",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "downloadPassword",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "disableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "disableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "enableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "enableLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "getChildrenChanged",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "structureWatermark",
+        "type": "Long"
+      }
+    ],
+    "description": null,
+    "return": "Long"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "getDownloadFolderHistorySelectionBase",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<String>"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "moveLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "movePackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "packageCount",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "queryLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<CrawledLink>"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "queryPackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<CrawledPackage>"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "removeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "removeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "renameLink",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageId",
+        "type": "Long"
+      },
+      {
+        "order": "2",
+        "name": "linkId",
+        "type": "Long"
+      },
+      {
+        "order": "3",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "renamePackage",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageId",
+        "type": "Long"
+      },
+      {
+        "order": "2",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "startDownloads",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcollector",
+    "endpoint": "startDownloads",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "List"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "List"
+      }
+    ],
+    "description": null,
+    "return": "boolean|null"
+  },
+  {
+    "namespace": "linkcrawler",
+    "endpoint": "isCrawling",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "abort",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "abort",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "jobId",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "addContainer",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "type",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "content",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "LinkCollectingJob"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "addLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "AddLinksQuery"
+      }
+    ],
+    "description": null,
+    "return": "LinkCollectingJob"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "addVariantCopy",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkid",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "destinationAfterLinkID",
+        "type": "long"
+      },
+      {
+        "order": "3",
+        "name": "destinationPackageID",
+        "type": "long"
+      },
+      {
+        "order": "4",
+        "name": "variantID",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "cleanup",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "action",
+        "type": "Action"
+      },
+      {
+        "order": "4",
+        "name": "mode",
+        "type": "Mode"
+      },
+      {
+        "order": "5",
+        "name": "selectionType",
+        "type": "SelectionType"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "clearList",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "getChildrenChanged",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "structureWatermark",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "long"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "getDownloadFolderHistorySelectionBase",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<String>"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "getDownloadUrls",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "urlDisplayTypes",
+        "type": "UrlDisplayTypeStorable[]"
+      }
+    ],
+    "description": null,
+    "return": "Map<String, List<Long>>"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "getPackageCount",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "int"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "getVariants",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkid",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": "List<LinkVariant>"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "isCollecting",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "moveLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "afterLinkID",
+        "type": "long"
+      },
+      {
+        "order": "3",
+        "name": "destPackageID",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "movePackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "afterDestPackageId",
+        "type": "long"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "moveToDownloadlist",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "movetoNewPackage",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "pkgIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "newPkgName",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "downloadPath",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "queryLinkCrawlerJobs",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "LinkCrawlerJobsQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<JobLinkCrawler>"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "queryLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "CrawledLinkQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<CrawledLink>"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "queryPackages",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "CrawledPackageQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<CrawledPackage>"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "removeLinks",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "renameLink",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkId",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "renamePackage",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "packageId",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "newName",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "setDownloadDirectory",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "directory",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "setDownloadPassword",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "pass",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "setEnabled",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "enabled",
+        "type": "boolean"
+      },
+      {
+        "order": "2",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "setPriority",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "priority",
+        "type": "Priority"
+      },
+      {
+        "order": "2",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "3",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "setVariant",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkid",
+        "type": "long"
+      },
+      {
+        "order": "2",
+        "name": "variantID",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "splitPackageByHoster",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "pkgIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "linkgrabberv2",
+    "endpoint": "startOnlineStatusCheck",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "2",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "log",
+    "endpoint": "getAvailableLogs",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "List<LogFolder>"
+  },
+  {
+    "namespace": "log",
+    "endpoint": "sendLogFile",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "logFolders",
+        "type": "LogFolderStorable[]"
+      }
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "get",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "displayName",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "Object"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "getAllPluginRegex",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "Map<String, List<String>>"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "getPluginRegex",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "URL",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "List<String>"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "list",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "PluginsQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<Plugin>"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "query",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "query",
+        "type": "AdvancedConfigQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<PluginConfigEntry>"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "reset",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "displayName",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "plugins",
+    "endpoint": "set",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "interfaceName",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "displayName",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "key",
+        "type": "String"
+      },
+      {
+        "order": "4",
+        "name": "newValue",
+        "type": "Object"
+      }
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "polling",
+    "endpoint": "poll",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "queryParams",
+        "type": "APIQuery"
+      }
+    ],
+    "description": null,
+    "return": "List<PollingResult>"
+  },
+  {
+    "namespace": "reconnect",
+    "endpoint": "doReconnect",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "session",
+    "endpoint": "disconnect",
+    "parameter": [
+
+    ],
+    "description": "invalides the current token",
+    "return": "boolean"
+  },
+  {
+    "namespace": "session",
+    "endpoint": "handshake",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "user",
+        "type": "String"
+      },
+      {
+        "order": "2",
+        "name": "password",
+        "type": "String"
+      }
+    ],
+    "description": "returns an un/authenticated token for given username and password or \"error\" in case login failed",
+    "return": "String"
+  },
+  {
+    "namespace": "system",
+    "endpoint": "exitJD",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "system",
+    "endpoint": "getStorageInfos",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "path",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "List<StorageInformation>"
+  },
+  {
+    "namespace": "system",
+    "endpoint": "getSystemInfos",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "SystemInformation"
+  },
+  {
+    "namespace": "system",
+    "endpoint": "hibernateOS",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "system",
+    "endpoint": "restartJD",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "system",
+    "endpoint": "shutdownOS",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "force",
+        "type": "boolean"
+      }
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "system",
+    "endpoint": "standbyOS",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "addLinksFromDOM",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "Object"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "checkLinksFromDOM",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "Object"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "getStatus",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "Object"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "isAvailable",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "pollCheckedLinksFromDOM",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "checkID",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "LinkCheckResult"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "specialURLHandling",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "url",
+        "type": "String"
+      }
+    ],
+    "description": null,
+    "return": "String"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "startDownloads",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "stopDownloads",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "toggleAutomaticReconnect",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "toggleClipboardMonitoring",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "toggleDownloadSpeedLimit",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "togglePauseDownloads",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "togglePremium",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "toggleStopAfterCurrentDownload",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "toolbar",
+    "endpoint": "triggerUpdate",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "ui",
+    "endpoint": "getMenu",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "context",
+        "type": "Context"
+      }
+    ],
+    "description": "Get the custom menu structure for the desired context",
+    "return": "MyJDMenuItem"
+  },
+  {
+    "namespace": "ui",
+    "endpoint": "invokeAction",
+    "parameter": [
+      {
+        "order": "1",
+        "name": "context",
+        "type": "Context"
+      },
+      {
+        "order": "2",
+        "name": "id",
+        "type": "String"
+      },
+      {
+        "order": "3",
+        "name": "linkIds",
+        "type": "long[]"
+      },
+      {
+        "order": "4",
+        "name": "packageIds",
+        "type": "long[]"
+      }
+    ],
+    "description": "Invoke a menu action on our selection and get the results.",
+    "return": "Object"
+  },
+  {
+    "namespace": "update",
+    "endpoint": "isUpdateAvailable",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": "boolean"
+  },
+  {
+    "namespace": "update",
+    "endpoint": "restartAndUpdate",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  },
+  {
+    "namespace": "update",
+    "endpoint": "runUpdateCheck",
+    "parameter": [
+
+    ],
+    "description": null,
+    "return": null
+  }
+]

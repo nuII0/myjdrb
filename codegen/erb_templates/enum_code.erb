@@ -1,0 +1,17 @@
+module Myjdrb
+	module Enum
+		<%- enums.each do |enum| -%>
+		class <%= enum[:name] -%> < String
+			ALLOWED_VALUES = <%= enum[:fields] %>
+			def initialize(val)
+				unless ALLOWED_VALUES.include? val
+					raise ArgumentError, "#{val} ist not in #{ALLOWED_VALUES}"
+				else
+					super
+				end
+			end
+		end
+
+		<%- end -%>
+	end
+end

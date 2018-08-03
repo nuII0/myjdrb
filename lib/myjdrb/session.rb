@@ -5,7 +5,7 @@ require 'myjdrb/crypto/signer'
 require 'myjdrb/util/counter'
 
 require 'myjdrb/executer'
-require 'myjdrb/requests/get'
+require 'myjdrb/request/get'
 
 module Myjdrb
 
