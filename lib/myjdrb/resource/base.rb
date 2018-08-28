@@ -1,7 +1,7 @@
 require 'myjdrb/endpoints'
 require 'myjdrb/struct/generated'
 require 'myjdrb/enum/generated'
-#require 'myjdrb/refinement/string_camel_snake_case'
+require 'myjdrb/refinement/string_camel_snake_case'
 require 'myjdrb/resource/definition'
 
 module Myjdrb
@@ -9,7 +9,7 @@ module Myjdrb
     class Base
       #extend Myjdrb::Mixin::TypedMethod
 
-      #using StringCamelSnakeCase
+      using StringCamelSnakeCase
 
       include Myjdrb::Struct
       include Myjdrb::Enum
@@ -54,7 +54,7 @@ module Myjdrb
       end
 
       def define_resource(name:, parameter_schema:{}, return_type: nil, http_type:)
-        resource = Definition.new(name: name.to_sym,
+        resource = Definition.new(names: [name.to_sym, name.to_s.snakecase.to_sym].uniq,
                                           parameter_schema: parameter_schema,
                                           http_type: http_type.to_sym,
                                           return_type: return_type)
@@ -64,8 +64,12 @@ module Myjdrb
 
       private
 
+      def resource_by_name(name)
+        @resources.select { |e| e.names.any?(name) }
+      end
+
       def resource_defined?(name)
-        @resources.any? {|r| r.name.eql? name }
+        resource_by_name(name).any?
       end
 
       def order_parameter(key_array, hash)
@@ -73,7 +77,7 @@ module Myjdrb
       end
 
       def find_matching_resource(name, parameter)
-        candidates = @resources.select { |e| e.name.eql? name }
+        candidates = resource_by_name name
 
         matches = candidates.select do |c|
           ClassyHash.validate(parameter, c.classy_hash_schema, full: true, strict: true, verbose: true, raise_errors: false)

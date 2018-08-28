@@ -1,8 +1,8 @@
 module Myjdrb
   module Resource
-    Definition = ::Struct.new(:name, :parameter_schema, :return_type, :http_type, keyword_init: true) do
+    Definition = ::Struct.new(:names, :parameter_schema, :return_type, :http_type, keyword_init: true) do
       def ambigious? other
-        if ((self.name.eql? other.name) && (self.parameter_schema.keys.eql? other.parameter_schema.keys) && (self.http_type.eql? other.http_type))
+        if ((self.names.eql? other.names) && (self.parameter_schema.keys.eql? other.parameter_schema.keys) && (self.http_type.eql? other.http_type))
           true
         else
           false
