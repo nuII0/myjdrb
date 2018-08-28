@@ -9,6 +9,8 @@ Below are some usage examples. For a complete feature set take a look at the [My
 ## Example Usage
 Enter your credentials and establish a session to My.JDownloader:
 ```rb
+require 'myjdrb'
+
 user = 'foo'
 pass = 'bar'
 
@@ -62,7 +64,7 @@ Links represent download resources like Videos or Files. They are grouped in pac
 #### Crawling links for resources
 Its possible to crawl webpages for downloadable resources and group them into a package.
 
-To add links, construct a `Myjdrb::Structs::AddLinksQueryStorable` and add links to it.
+To add links, construct a `Myjdrb::Struct::AddLinksQuery` and add links to it.
 ```rb
 struct = Myjdrb::Struct::AddLinksQuery.new
 struct.packageName = "MyNewPackage"
@@ -76,7 +78,7 @@ dev.linkgrabberv2.addLinks(query: struct)
 
 or:
 
-`Myjdrb::Structs::AddLinksQueryStorable` has more configuration options like `#autoExtract (Boolean)`, `#downloadPassword (String)` and so on.
+`Myjdrb::Struct::AddLinksQuery` has more configuration options like `#autoExtract (Boolean)`, `#downloadPassword (String)` and so on.
 
 #### Listing packages
 Receiving informations about current packages:
@@ -144,20 +146,29 @@ If you use one of the methods incorrectly, an `ArgumentError` will be raised and
 ```rb
 dev.config.list(wrong_parameter: 12)
 
-	=> ArgumentError: Given parameters are invalid. 
-	Given parameters: {:wrong_parameter=>12}, 
-	Required (one of the following): 
-		[{},
+=> ArgumentError: Given parameters are invalid. 
+Given parameters: {:wrong_parameter=>12}, 
+Required (one of the following): 
+[
+{},
+
 {:pattern=>{:type=>String},
-	:returnDescription=>{:type=>TrueClass},
-	:returnValues=>{:type=>TrueClass},
-	:returnDefaultValues=>{:type=>TrueClass},
-	:returnEnumInfo=>{:type=>TrueClass}},
+:returnDescription=>{:type=>TrueClass},
+:returnValues=>{:type=>TrueClass},
+:returnDefaultValues=>{:type=>TrueClass},
+:returnEnumInfo=>{:type=>TrueClass}},
+
 {:pattern=>{:type=>String},
-	:returnDescription=>{:type=>TrueClass},
-	:returnValues=>{:type=>TrueClass},
-	:returnDefaultValues=>{:type=>TrueClass}}]
+:returnDescription=>{:type=>TrueClass},
+:returnValues=>{:type=>TrueClass},
+:returnDefaultValues=>{:type=>TrueClass}}
+]
 ```
+In this case, three variants are possible. No arguments (indicated by `{}`) or two variants, on of them looking like this:
+```rb
+dev.config.list(pattern: %r{.*}.to_s, returnDescription: true, returnValues: true, returnDefaultValues: true, returnEnumInfo: true)
+```
+
 
 If correct parameters are provided but the contents are wrong, things can get tricky.
 
