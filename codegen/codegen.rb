@@ -15,6 +15,10 @@ class CodeGen
 
     @ordered_resources = typed_resources.group_by { |x| x[:namespace] }
 
+    # remove for now
+    @ordered_resources.delete("captchaforward")
+    @ordered_resources.delete("flash")
+
     typed_structs = convert_structs_types structs
     structs_default_values = set_structs_default_values typed_structs
 

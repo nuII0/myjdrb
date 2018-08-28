@@ -14,5 +14,6 @@ module Myjdrb
       super msg
     end
   end
+  class AmbiguousResourceDefinition < Error; end
 end
 

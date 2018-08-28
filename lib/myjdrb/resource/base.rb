@@ -1,15 +1,15 @@
 require 'myjdrb/endpoints'
 require 'myjdrb/struct/generated'
 require 'myjdrb/enum/generated'
-require 'myjdrb/mixin/typed_method'
-require 'myjdrb/refinement/string_camel_snake_case'
+#require 'myjdrb/refinement/string_camel_snake_case'
+require 'myjdrb/resource/definition'
 
 module Myjdrb
   module Resource
     class Base
-      extend Myjdrb::Mixin::TypedMethod
+      #extend Myjdrb::Mixin::TypedMethod
 
-      using StringCamelSnakeCase
+      #using StringCamelSnakeCase
 
       include Myjdrb::Struct
       include Myjdrb::Enum
@@ -19,14 +19,25 @@ module Myjdrb
         @device_id = device_id
         @executer = executer
         @endpoint_name = endpoint_name
+        @resources = []
       end
 
-      #def method_missing(message, *args, &block)
-      #uri = build_uri message
-      #payload = args
+      def method_missing(message, *args, **kwargs, &block)
+        super unless resource_defined? message
 
-      #execute_generic_post(uri, payload)
-      #end
+        resource = find_matching_resource(message, kwargs)
+
+        ordered_parameter = order_parameter(resource.parameter_schema.keys, kwargs)
+
+        uri = build_uri message.to_s
+
+        payload = ordered_parameter.values.map(&:to_json)
+        execute_generic_post(uri, payload)
+      end
+
+      def respond_to?(message, include_private = false)
+        resource_defined? message
+      end
 
       def execute_generic_post(uri, payload)
         endpoint = Endpoints::PostEndpoint(uri, Schema::Response::GENERIC).new(
@@ -38,30 +49,51 @@ module Myjdrb
         @executer.execute_request(endpoint, request).data
       end
 
-      #def respond_to_missing?(*)
-      #true
-      #end
-
       def build_uri path
         "/#{@endpoint_name}/#{path}"
       end
 
-      def define_resource(name:, parameter:{}, return_type: nil, &blk)
-        method_name = name
+      def define_resource(name:, parameter_schema:{}, return_type: nil, http_type:)
+        resource = Definition.new(name: name.to_sym,
+                                          parameter_schema: parameter_schema,
+                                          http_type: http_type.to_sym,
+                                          return_type: return_type)
+        check_ambigious(resource)
+        @resources << resource
+      end
 
-        if self.class.public_instance_methods.any? name
-          method_name = "#{name}1"
-          return if self.class.public_instance_methods.any? method_name
+      private
+
+      def resource_defined?(name)
+        @resources.any? {|r| r.name.eql? name }
+      end
+
+      def order_parameter(key_array, hash)
+        key_array.zip(hash.values_at(*key_array)).to_h
+      end
+
+      def find_matching_resource(name, parameter)
+        candidates = @resources.select { |e| e.name.eql? name }
+
+        matches = candidates.select do |c|
+          ClassyHash.validate(parameter, c.classy_hash_schema, full: true, strict: true, verbose: true, raise_errors: false)
         end
 
-        self.class.define_typed_method(name: method_name, typed_parameter: parameter) do |arguments|
-          uri = build_uri name
-          payload = arguments.values.map(&:to_json)
-          execute_generic_post(uri, payload)
+        if matches.empty?
+          raise ArgumentError.new("Given parameters are invalid. Given parameters: #{parameter}, Required (one of the following): #{candidates.collect(&:parameter_schema)}")
+        elsif matches.length > 1
+          raise "Multiple matches found as candidates."
         end
 
-        # provide snake_case variant
-        self.class.alias_method name.to_s.snakecase, name
+        matches.first
+      end
+
+      def check_ambigious(resource_definition)
+        @resources.each do |r|
+          if r.ambigious? resource_definition
+            raise AmbiguousResourceDefinition.new("Another scheme is already defined with keys from #{r.parameter_schema}")
+          end
+        end
       end
     end
   end

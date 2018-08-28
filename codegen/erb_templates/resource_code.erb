@@ -10,7 +10,8 @@ module Myjdrb
 				<%- api_calls.each do |api_call| -%>
 				define_resource(
 					name: :<%= api_call[:endpoint].to_s -%>,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					<%- api_call[:parameter].each_with_index do |param, index| -%>
 						<%= param[:name].to_s -%>:

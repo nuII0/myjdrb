@@ -8,14 +8,16 @@ module Myjdrb
 
 				define_resource(
 					name: :getCaptcha,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :get,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -26,7 +28,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :get,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -41,7 +44,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getCaptchaJob,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -52,14 +56,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [CaptchaJob]
 				)
 				define_resource(
 					name: :skip,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -74,7 +80,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :skip,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -85,7 +92,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :solve,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -104,7 +112,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :solve,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -125,49 +134,56 @@ module Myjdrb
 
 				define_resource(
 					name: :flash,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :crossdomain,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :favicon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :flashgot,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :jdcheck,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :jdcheckjson,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :flash,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
@@ -180,7 +196,8 @@ module Myjdrb
 
 				define_resource(
 					name: :addAccount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						premiumHoster:
 						{
@@ -199,7 +216,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :disableAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -210,7 +228,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :enableAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -221,7 +240,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getAccountInfo,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -232,7 +252,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getPremiumHosterUrl,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						hoster:
 						{
@@ -243,21 +264,24 @@ module Myjdrb
 				)
 				define_resource(
 					name: :listPremiumHoster,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [String]
 				)
 				define_resource(
 					name: :listPremiumHosterUrls,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :premiumHosterIcon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						premiumHoster:
 						{
@@ -268,7 +292,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -279,7 +304,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -290,7 +316,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setEnabledState,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						enabled:
 						{
@@ -305,7 +332,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :updateAccount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						accountId:
 						{
@@ -330,7 +358,8 @@ module Myjdrb
 
 				define_resource(
 					name: :addAccount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						premiumHoster:
 						{
@@ -349,7 +378,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addBasicAuth,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						type:
 						{
@@ -372,7 +402,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :disableAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -383,7 +414,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :enableAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -394,7 +426,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getPremiumHosterUrl,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						hoster:
 						{
@@ -405,7 +438,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :listAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -416,28 +450,32 @@ module Myjdrb
 				)
 				define_resource(
 					name: :listBasicAuth,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [BasicAuthentication]
 				)
 				define_resource(
 					name: :listPremiumHoster,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [String]
 				)
 				define_resource(
 					name: :listPremiumHosterUrls,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :refreshAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -448,7 +486,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeAccounts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -459,7 +498,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeBasicAuths,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						ids:
 						{
@@ -470,7 +510,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setUserNameAndPassword,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						accountId:
 						{
@@ -489,7 +530,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :updateBasicAuth,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						updatedEntry:
 						{
@@ -500,53 +542,14 @@ module Myjdrb
 				)
 			end
 		end
-		class Captchaforward < Base
-			def initialize(device_id:, sessiontoken:, executer:)
-				super( device_id, sessiontoken, executer, "captchaforward" )
-
-				define_resource(
-					name: :createJobRecaptchaV2,
-					parameter:
-					{
-						 String:
-						{
-							type: nil
-						},
-						 String:
-						{
-							type: nil
-						},
-						 String:
-						{
-							type: nil
-						},
-						 String:
-						{
-							type: nil
-						}
-					},
-					return_type: Integer
-				)
-				define_resource(
-					name: :getResult,
-					parameter:
-					{
-						 long:
-						{
-							type: nil
-						}
-					},
-					return_type: String
-				)
-			end
-		end
 		class Config < Base
 			def initialize(device_id:, sessiontoken:, executer:)
 				super( device_id, sessiontoken, executer, "config" )
 
 				define_resource(
 					name: :get,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -565,7 +568,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getDefault,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -584,14 +588,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [AdvancedConfigAPIEntry]
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						pattern:
 						{
@@ -618,7 +624,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						pattern:
 						{
@@ -641,7 +648,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :listEnum,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						type:
 						{
@@ -652,7 +660,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :query,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -663,7 +672,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :reset,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -682,7 +692,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :set,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -711,7 +722,8 @@ module Myjdrb
 
 				define_resource(
 					name: :favicon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						hostername:
 						{
@@ -722,7 +734,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :fileIcon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						filename:
 						{
@@ -739,7 +752,8 @@ module Myjdrb
 
 				define_resource(
 					name: :getFavIcon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						hostername:
 						{
@@ -750,7 +764,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getFileIcon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						filename:
 						{
@@ -761,7 +776,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getIcon,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						key:
 						{
@@ -776,7 +792,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getIconDescription,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						key:
 						{
@@ -793,21 +810,24 @@ module Myjdrb
 
 				define_resource(
 					name: :getDirectConnectionInfos,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :getSessionPublicKey,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :ping,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
@@ -820,7 +840,8 @@ module Myjdrb
 
 				define_resource(
 					name: :answer,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -835,7 +856,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :get,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -854,7 +876,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getTypeInfo,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						dialogType:
 						{
@@ -865,7 +888,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [Integer]
@@ -878,7 +902,8 @@ module Myjdrb
 
 				define_resource(
 					name: :forceDownload,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -893,21 +918,24 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getCurrentState,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :getSpeedInBps,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :pause,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						value:
 						{
@@ -918,14 +946,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :start,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :stop,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
@@ -938,7 +968,8 @@ module Myjdrb
 
 				define_resource(
 					name: :queryLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -953,7 +984,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setStatusEventInterval,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						channelID:
 						{
@@ -974,7 +1006,8 @@ module Myjdrb
 
 				define_resource(
 					name: :disableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -989,7 +1022,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :disableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1000,7 +1034,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :enableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1015,7 +1050,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :enableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1026,7 +1062,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :forceDownload,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1041,7 +1078,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :forceDownload,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1052,7 +1090,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getChildrenChanged,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						structureWatermark:
 						{
@@ -1063,14 +1102,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getJDState,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :moveLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -1081,7 +1122,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :movePackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -1092,14 +1134,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :packageCount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :pause,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						value:
 						{
@@ -1110,7 +1154,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -1121,7 +1166,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryPackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -1132,7 +1178,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1147,7 +1194,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1158,7 +1206,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :renamePackage,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageId:
 						{
@@ -1173,7 +1222,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :resetLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1184,7 +1234,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :resetLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1199,21 +1250,24 @@ module Myjdrb
 				)
 				define_resource(
 					name: :speed,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :start,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :stop,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
@@ -1226,7 +1280,8 @@ module Myjdrb
 
 				define_resource(
 					name: :cleanup,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1253,7 +1308,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :forceDownload,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1268,7 +1324,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getDownloadUrls,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1287,21 +1344,24 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getStopMark,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :getStopMarkedLink,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: DownloadLink
 				)
 				define_resource(
 					name: :getStructureChangeCounter,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						oldCounterValue:
 						{
@@ -1312,7 +1372,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :moveLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1331,7 +1392,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :movePackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageIds:
 						{
@@ -1346,7 +1408,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :movetoNewPackage,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1369,14 +1432,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :packageCount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :queryLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -1387,7 +1452,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryPackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -1398,7 +1464,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1413,14 +1480,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeStopMark,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :renameLink,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkId:
 						{
@@ -1435,7 +1504,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :renamePackage,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageId:
 						{
@@ -1450,7 +1520,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :resetLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1465,7 +1536,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :resumeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1480,7 +1552,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setDownloadDirectory,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						directory:
 						{
@@ -1495,7 +1568,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setDownloadPassword,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1514,7 +1588,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setEnabled,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						enabled:
 						{
@@ -1533,7 +1608,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setPriority,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						priority:
 						{
@@ -1552,7 +1628,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setStopMark,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkId:
 						{
@@ -1567,7 +1644,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :splitPackageByHoster,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1582,7 +1660,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :startOnlineStatusCheck,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1597,7 +1676,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :unskip,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageIds:
 						{
@@ -1622,7 +1702,8 @@ module Myjdrb
 
 				define_resource(
 					name: :addsubscription,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1641,7 +1722,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :changesubscriptiontimeouts,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1660,7 +1742,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getsubscription,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1671,7 +1754,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getsubscriptionstatus,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1682,7 +1766,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :listen,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1693,14 +1778,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :listpublisher,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [PublisherResponse]
 				)
 				define_resource(
 					name: :removesubscription,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1719,7 +1806,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setsubscription,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1738,7 +1826,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :subscribe,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptions:
 						{
@@ -1753,7 +1842,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :unsubscribe,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						subscriptionid:
 						{
@@ -1770,7 +1860,8 @@ module Myjdrb
 
 				define_resource(
 					name: :install,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -1781,7 +1872,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :isEnabled,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						classname:
 						{
@@ -1792,7 +1884,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :isInstalled,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						id:
 						{
@@ -1803,7 +1896,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -1814,7 +1908,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setEnabled,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						classname:
 						{
@@ -1835,7 +1930,8 @@ module Myjdrb
 
 				define_resource(
 					name: :addArchivePassword,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						password:
 						{
@@ -1846,7 +1942,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :cancelExtraction,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						controllerID:
 						{
@@ -1857,7 +1954,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getArchiveInfo,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1872,7 +1970,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getArchiveSettings,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						archiveIds:
 						{
@@ -1883,14 +1982,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getQueue,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [ArchiveStatus]
 				)
 				define_resource(
 					name: :setArchiveSettings,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						archiveId:
 						{
@@ -1905,7 +2006,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :startExtractionNow,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -1920,133 +2022,38 @@ module Myjdrb
 				)
 			end
 		end
-		class Flash < Base
-			def initialize(device_id:, sessiontoken:, executer:)
-				super( device_id, sessiontoken, executer, "flash" )
-
-				define_resource(
-					name: :add,
-					parameter:
-					{
-						password:
-						{
-							type: String
-						},
-						source:
-						{
-							type: String
-						},
-						url:
-						{
-							type: String
-						}
-					},
-					return_type: nil
-				)
-				define_resource(
-					name: :add,
-					parameter:
-					{
-						 String:
-						{
-							type: nil
-						},
-						 String:
-						{
-							type: nil
-						},
-						 String:
-						{
-							type: nil
-						},
-						 String:
-						{
-							type: nil
-						}
-					},
-					return_type: nil
-				)
-				define_resource(
-					name: :add,
-					parameter:
-					{
-					},
-					return_type: nil
-				)
-				define_resource(
-					name: :addcnl,
-					parameter:
-					{
-						cnl:
-						{
-							type: CnlQuery
-						}
-					},
-					return_type: nil
-				)
-				define_resource(
-					name: :addcrypted,
-					parameter:
-					{
-					},
-					return_type: nil
-				)
-				define_resource(
-					name: :addcrypted2,
-					parameter:
-					{
-					},
-					return_type: nil
-				)
-				define_resource(
-					name: :addcrypted2Remote,
-					parameter:
-					{
-						crypted:
-						{
-							type: String
-						},
-						jk:
-						{
-							type: String
-						},
-						k:
-						{
-							type: String
-						}
-					},
-					return_type: nil
-				)
-			end
-		end
 		class Jd < Base
 			def initialize(device_id:, sessiontoken:, executer:)
 				super( device_id, sessiontoken, executer, "jd" )
 
 				define_resource(
 					name: :doSomethingCool,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :getCoreRevision,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :refreshPlugins,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :sum,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						a:
 						{
@@ -2061,14 +2068,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :uptime,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :version,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
@@ -2081,7 +2090,8 @@ module Myjdrb
 
 				define_resource(
 					name: :addContainer,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						type:
 						{
@@ -2096,7 +2106,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						link:
 						{
@@ -2119,7 +2130,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						links:
 						{
@@ -2146,7 +2158,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addLinksAndStartDownload,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						links:
 						{
@@ -2169,7 +2182,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :disableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2184,7 +2198,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :disableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2195,7 +2210,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :enableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2210,7 +2226,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :enableLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2221,7 +2238,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getChildrenChanged,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						structureWatermark:
 						{
@@ -2232,14 +2250,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getDownloadFolderHistorySelectionBase,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [String]
 				)
 				define_resource(
 					name: :moveLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -2250,7 +2270,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :movePackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -2261,14 +2282,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :packageCount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :queryLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -2279,7 +2302,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryPackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -2290,7 +2314,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageIds:
 						{
@@ -2305,7 +2330,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2316,7 +2342,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :renameLink,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageId:
 						{
@@ -2335,7 +2362,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :renamePackage,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageId:
 						{
@@ -2350,7 +2378,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :startDownloads,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2361,7 +2390,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :startDownloads,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2382,7 +2412,8 @@ module Myjdrb
 
 				define_resource(
 					name: :isCrawling,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
@@ -2395,14 +2426,16 @@ module Myjdrb
 
 				define_resource(
 					name: :abort,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :abort,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						jobId:
 						{
@@ -2413,7 +2446,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addContainer,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						type:
 						{
@@ -2428,7 +2462,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -2439,7 +2474,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :addVariantCopy,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkid:
 						{
@@ -2462,7 +2498,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :cleanup,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2489,14 +2526,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :clearList,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :getChildrenChanged,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						structureWatermark:
 						{
@@ -2507,14 +2546,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getDownloadFolderHistorySelectionBase,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [String]
 				)
 				define_resource(
 					name: :getDownloadUrls,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2533,14 +2574,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getPackageCount,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Integer
 				)
 				define_resource(
 					name: :getVariants,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkid:
 						{
@@ -2551,14 +2594,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :isCollecting,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :moveLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2577,7 +2622,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :movePackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageIds:
 						{
@@ -2592,7 +2638,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :moveToDownloadlist,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2607,7 +2654,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :movetoNewPackage,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2630,7 +2678,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryLinkCrawlerJobs,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -2641,7 +2690,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -2652,7 +2702,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :queryPackages,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -2663,7 +2714,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :removeLinks,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2678,7 +2730,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :renameLink,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkId:
 						{
@@ -2693,7 +2746,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :renamePackage,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						packageId:
 						{
@@ -2708,7 +2762,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setDownloadDirectory,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						directory:
 						{
@@ -2723,7 +2778,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setDownloadPassword,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2742,7 +2798,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setEnabled,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						enabled:
 						{
@@ -2761,7 +2818,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setPriority,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						priority:
 						{
@@ -2780,7 +2838,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :setVariant,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkid:
 						{
@@ -2795,7 +2854,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :splitPackageByHoster,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2810,7 +2870,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :startOnlineStatusCheck,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						linkIds:
 						{
@@ -2831,14 +2892,16 @@ module Myjdrb
 
 				define_resource(
 					name: :getAvailableLogs,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: [LogFolder]
 				)
 				define_resource(
 					name: :sendLogFile,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						logFolders:
 						{
@@ -2855,7 +2918,8 @@ module Myjdrb
 
 				define_resource(
 					name: :get,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -2874,14 +2938,16 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getAllPluginRegex,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :getPluginRegex,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						URL:
 						{
@@ -2892,7 +2958,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :list,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -2903,7 +2970,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :query,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						query:
 						{
@@ -2914,7 +2982,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :reset,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -2933,7 +3002,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :set,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						interfaceName:
 						{
@@ -2962,7 +3032,8 @@ module Myjdrb
 
 				define_resource(
 					name: :poll,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						queryParams:
 						{
@@ -2979,7 +3050,8 @@ module Myjdrb
 
 				define_resource(
 					name: :doReconnect,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
@@ -2992,14 +3064,16 @@ module Myjdrb
 
 				define_resource(
 					name: :disconnect,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :handshake,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						user:
 						{
@@ -3020,14 +3094,16 @@ module Myjdrb
 
 				define_resource(
 					name: :exitJD,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :getStorageInfos,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						path:
 						{
@@ -3038,28 +3114,32 @@ module Myjdrb
 				)
 				define_resource(
 					name: :getSystemInfos,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: String
 				)
 				define_resource(
 					name: :hibernateOS,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :restartJD,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :shutdownOS,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						force:
 						{
@@ -3070,7 +3150,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :standbyOS,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
@@ -3083,35 +3164,40 @@ module Myjdrb
 
 				define_resource(
 					name: :addLinksFromDOM,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Object
 				)
 				define_resource(
 					name: :checkLinksFromDOM,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Object
 				)
 				define_resource(
 					name: :getStatus,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: Object
 				)
 				define_resource(
 					name: :isAvailable,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :pollCheckedLinksFromDOM,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						checkID:
 						{
@@ -3122,7 +3208,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :specialURLHandling,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						url:
 						{
@@ -3133,63 +3220,72 @@ module Myjdrb
 				)
 				define_resource(
 					name: :startDownloads,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :stopDownloads,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :toggleAutomaticReconnect,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :toggleClipboardMonitoring,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :toggleDownloadSpeedLimit,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :togglePauseDownloads,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :togglePremium,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :toggleStopAfterCurrentDownload,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :triggerUpdate,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
@@ -3202,7 +3298,8 @@ module Myjdrb
 
 				define_resource(
 					name: :getMenu,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						context:
 						{
@@ -3213,7 +3310,8 @@ module Myjdrb
 				)
 				define_resource(
 					name: :invokeAction,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 						context:
 						{
@@ -3242,21 +3340,24 @@ module Myjdrb
 
 				define_resource(
 					name: :isUpdateAvailable,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: TrueClass
 				)
 				define_resource(
 					name: :restartAndUpdate,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
 				)
 				define_resource(
 					name: :runUpdateCheck,
-					parameter:
+					http_type: :post,
+					parameter_schema:
 					{
 					},
 					return_type: nil
