@@ -139,42 +139,52 @@ Or shutdown of the entire OS..
 dev.system.shutdownOS
 ```
 
-<!--### Error handling-->
-<!--A `Myjdrb::ResponseError` will be thrown if something goes wrong.-->
+### Error handling
+If you use one of the methods incorrectly, an `ArgumentError` will be raised and provide info abour correct calls.
+```rb
+dev.config.list(wrong_parameter: 12)
 
-<!--For example if an invalid endpoint is used:-->
-<!--```rb-->
-<!--begin-->
-	<!--config = dev.config-->
+	=> ArgumentError: Given parameters are invalid. 
+	Given parameters: {:wrong_parameter=>12}, 
+	Required (one of the following): 
+		[{},
+{:pattern=>{:type=>String},
+	:returnDescription=>{:type=>TrueClass},
+	:returnValues=>{:type=>TrueClass},
+	:returnDefaultValues=>{:type=>TrueClass},
+	:returnEnumInfo=>{:type=>TrueClass}},
+{:pattern=>{:type=>String},
+	:returnDescription=>{:type=>TrueClass},
+	:returnValues=>{:type=>TrueClass},
+	:returnDefaultValues=>{:type=>TrueClass}}]
+```
 
-	<!--config.iDontExist-->
-<!--rescue Myjdrb::ResponseError => e-->
-	<!--e-->
-	<!--=> #<Myjdrb::ResponseError: 404 Not Found : {"type"=>"API_COMMAND_NOT_FOUND", "data"=>nil, "src"=>"DEVICE"}>-->
+If correct parameters are provided but the contents are wrong, things can get tricky.
 
-	<!--e.request-->
-	<!--=> #<Myjdrb::Requests::Post:0x000055cb2c4eac30 @action="/config/iDontExist", @api_version=1, @parameter=[], @query_parameter={}, @rid=1337>-->
+```rb
+config.get(interfaceName: "org.jdownloader.settings.GeneralSettings", key: "MaxSimultaneDownloads", storage: "")
+=> ClassyHash::SchemaViolationError: :data is not present
+```
+In this case, storage has wrongly been initialized with an empty String but it cant be omited that way and must be "null"
 
-	<!--e.uri-->
-	<!--=> #<URI::HTTPS https://api.jdownloader.org/t_sessiontoken_deviceid/config/iDontExist>-->
-<!--end-->
-<!--```-->
-
-<!--Wrong parameter submitted:-->
-<!--```rb-->
-<!--dev.linkgrabberv2.addLinks("weird parameter")-->
- <!--=> Myjdrb::ResponseError: 400 Bad Request : {"type"=>"BAD_PARAMETERS", "data"=>"weird parameter", "src"=>"DEVICE"}-->
-<!--```-->
+```rb
+config.get(interfaceName: "org.jdownloader.settings.GeneralSettings", key: "MaxSimultaneDownloads", storage: "null")
+=> 2
+```
+There are quite some of these quirks in the API and its hard to check these errors on the client side. To make things even worse, its nowhere documented (besides the in the sourcecode) that in this case, storage must be set to "null".
 
 ### API inconsistency
-Don't blame this client for the various inconsistencies of the API. Like arguments sometimes taking arrays and sometimes comma-separated strings. Or query parameter sometimes being named `query` on one call but `queryParams` on another call. Overall, the API is designed badly and, contrary to the documentations claim, everything but 'REST based'. This client is a direct mapping of the API and therefore carries all the bad designs along.
+	Don't blame this client for the various inconsistencies of the API. 
+	Like arguments sometimes taking arrays and sometimes comma-separated strings. Or query parameter sometimes being named `query` on one call but `queryParams` on another call. 
+
+	Overall, the API is designed badly and, contrary to the documentations claim, everything but 'REST based'. This client is a direct mapping of the API and therefore carries all the bad designs along.
 
 ## Similar Projects
-There are other client librabries in other languages available.
+	There are other client librabries in other languages available.
 
-* [My.Jdownloader-API-Python-Library (github.com)](https://github.com/mmarquezs/My.Jdownloader-API-Python-Library)
-* [my.jdownloader.org-api-php-class (github.com)](https://github.com/tofika/my.jdownloader.org-api-php-class)
-* [Node Jdownloader API (github.com)](https://github.com/malleguisse/node-jdownloader-api)
+	* [My.Jdownloader-API-Python-Library (github.com)](https://github.com/mmarquezs/My.Jdownloader-API-Python-Library)
+	* [my.jdownloader.org-api-php-class (github.com)](https://github.com/tofika/my.jdownloader.org-api-php-class)
+	* [Node Jdownloader API (github.com)](https://github.com/malleguisse/node-jdownloader-api)
 
 ## License
-This library is licensed under the MIT License.
+	This library is licensed under the MIT License.
