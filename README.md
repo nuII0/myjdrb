@@ -25,7 +25,6 @@ dev = devices.first
 dev.name
 => "user@MyDevice"
 ```
-###
 
 ### Configuration usage
 It is possible to retrieve and set configurations for a running instance:
@@ -146,9 +145,9 @@ If you use one of the methods incorrectly, an `ArgumentError` will be raised and
 ```rb
 dev.config.list(wrong_parameter: 12)
 
-=> ArgumentError: Given parameters are invalid. 
-Given parameters: {:wrong_parameter=>12}, 
-Required (one of the following): 
+=> ArgumentError: Given parameters are invalid.
+Given parameters: {:wrong_parameter=>12},
+Required (one of the following):
 [
 {},
 
@@ -185,17 +184,17 @@ config.get(interfaceName: "org.jdownloader.settings.GeneralSettings", key: "MaxS
 There are quite some of these quirks in the API and its hard to check these errors on the client side. To make things even worse, its nowhere documented (besides the in the sourcecode) that in this case, storage must be set to "null".
 
 ### API inconsistency
-	Don't blame this client for the various inconsistencies of the API. 
-	Like arguments sometimes taking arrays and sometimes comma-separated strings. Or query parameter sometimes being named `query` on one call but `queryParams` on another call. 
+Don't blame this client for the various inconsistencies of the API.
+Like arguments sometimes taking arrays and sometimes comma-separated strings. Or query parameter sometimes being named `query` on one call but `queryParams` on another call.
 
-	Overall, the API is designed badly and, contrary to the documentations claim, everything but 'REST based'. This client is a direct mapping of the API and therefore carries all the bad designs along.
+Overall, the API is designed badly and, contrary to the documentations claim, everything but 'REST based'. This client is a direct mapping of the API and therefore carries all the bad designs along.
 
 ## Similar Projects
-	There are other client librabries in other languages available.
+There are other client librabries in other languages available.
 
-	* [My.Jdownloader-API-Python-Library (github.com)](https://github.com/mmarquezs/My.Jdownloader-API-Python-Library)
-	* [my.jdownloader.org-api-php-class (github.com)](https://github.com/tofika/my.jdownloader.org-api-php-class)
-	* [Node Jdownloader API (github.com)](https://github.com/malleguisse/node-jdownloader-api)
+* [My.Jdownloader-API-Python-Library (github.com)](https://github.com/mmarquezs/My.Jdownloader-API-Python-Library)
+* [my.jdownloader.org-api-php-class (github.com)](https://github.com/tofika/my.jdownloader.org-api-php-class)
+* [Node Jdownloader API (github.com)](https://github.com/malleguisse/node-jdownloader-api)
 
 ## License
-	This library is licensed under the MIT License.
+This library is licensed under the MIT License.
